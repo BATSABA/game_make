@@ -12,7 +12,7 @@ public class Game {
         MainCharacter me = new MainCharacter();
         Character1 girl1 = new Character1(this, me);
         Character2 boy1 = new Character2(this, me); 
-        while (this.gameStat && this.date < 10) {
+        while (this.gameStat && this.date < 7) {
             switch (this.date) {
                 case 1:
                     girl1.DAY1_goSchool();
@@ -35,15 +35,6 @@ public class Game {
                 case 7:
                     // Date 7 events
                     break;
-                case 8:
-                    // Date 8 events
-                    break;
-                case 9:
-                    // Date 9 events
-                    break;
-                case 10:
-                    // Date 10 events
-                    break;
                 default:
                     break;
             }
@@ -57,7 +48,6 @@ public class Game {
         Game newGame = new Game();
     }
 
-    
 }
 
 class SubCharacter {
@@ -101,8 +91,12 @@ class Character1 extends SubCharacter {
     public void DAY1_goSchool() {
         System.out.println("好久不見，" + mainCharacter.name + "!");
     }
-    publuc void DAY2() {
-        
+
+    public void surveillance() {
+        if (random.nextInt(101 - likePoint) == 0) {
+            System.out.println("你怎麼可以這樣?");
+            game.gameStat = false;
+        }
     }
 }
 
