@@ -4,11 +4,19 @@ class Character2 extends SubCharacter {
         this.mainCharacter = mainCharacter;
         this.type = "同桌";
         this.name = "default";
-        this.likePoint = random.nextInt(21) + 50;
+        this.likePoint = random.nextInt(21) + 50;//<100
         this.gender = "男";
     }
 
-    public void someEvent() {
+    public void Day1_Event() {
+
+    }
+    
+    public void Day2_Event() {
+
+    }
+    
+    public void Day3_Event() {
 
     }
 }
