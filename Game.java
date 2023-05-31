@@ -15,7 +15,6 @@ public class Game {
         while (this.gameStat && this.date < 10) {
             switch (this.date) {
                 case 1:
-                    // Date 1 events
                     girl1.DAY1_goSchool();
                     break;
                 case 2:
@@ -58,17 +57,14 @@ public class Game {
         Game newGame = new Game();
     }
 
-    public void printAll(SubCharacter[] characters) {
-        for (int i = 0; i < characters.length; i++) {
-            characters[i].print();
-        }
-    }
+    
 }
 
 class SubCharacter {
     String gender;
     int likePoint;
     String name;
+    String type;
     Random random = new Random();
     Scanner scanner = new Scanner(System.in);
     Game game;
@@ -80,7 +76,6 @@ class SubCharacter {
     }
 
     public void print() {
-        System.out.println("++++++++++++++++++++++++++");
         System.out.println("Name: " + this.name);
         System.out.println("Gender: " + this.gender);
         System.out.print("Like Point: ");
@@ -89,15 +84,16 @@ class SubCharacter {
             else System.out.print("-");
         }
         System.out.println(this.likePoint + "%");
-        System.out.println("++++++++++++++++++++++++++");
     }
 }
 
 class Character1 extends SubCharacter {
     public Character1(Game game, MainCharacter mainCharacter) {
         super(game, mainCharacter);
+        this.game = game;
         this.mainCharacter = mainCharacter;
-        this.name = "青梅竹馬";
+        this.type = "青梅竹馬";
+        this.name = "default";
         this.likePoint = random.nextInt(16) + 70;
         this.gender = "女";
     }
@@ -105,20 +101,18 @@ class Character1 extends SubCharacter {
     public void DAY1_goSchool() {
         System.out.println("好久不見，" + mainCharacter.name + "!");
     }
-
-    public void surveillance() {
-        if (random.nextInt(101 - likePoint) == 0) {
-            System.out.println("你怎麼可以這樣?");
-            game.gameStat = false;
-        }
+    publuc void DAY2() {
+        
     }
 }
 
 class Character2 extends SubCharacter {
     public Character2(Game game, MainCharacter mainCharacter) {
         super(game, mainCharacter);
+        this.game = game;
         this.mainCharacter = mainCharacter;
-        this.name = "同桌";
+        this.type = "同桌";
+        this.name = "default";
         this.likePoint = random.nextInt(21) + 50;
         this.gender = "男";
     }
