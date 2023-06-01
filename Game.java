@@ -273,7 +273,6 @@ class Character3 extends SubCharacter {
         }
         else if (choice == 2) {
             likePoint = 100;
-            game.gameStat = false;
             System.out.println("主角：學長，我來幫你切蛋糕吧。你要多大塊呢？");
             System.out.println("學長：你就照你想要切的大小就可以。");
             System.out.println("主角：那我就隨便切囉。");
