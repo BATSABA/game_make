@@ -126,11 +126,11 @@ class Character1 extends SubCharacter {
             choice = scanner.nextInt();
             if(choice == 1) {
                 this.likePoint += 3;
-                System.out.println("女：那我們走吧，有點累哈哈明天還有考試呢(開心)");
+                System.out.println("女：那我們走吧，有點累哈哈明天還有考試呢！");
             }
             if(choice == 2) {
                 this.likePoint -= 3;
-                System.out.println("女：那我們走吧，有點累哈哈明天還有考試呢(沮喪)");
+                System.out.println("女：那我們走吧，有點累哈哈明天還有考試呢。");
             }
             System.out.println("1：這個夕陽好好看 可惜明天要考試 那我們等到太陽下山再走吧");
             System.out.println("2：要趕快回家看書了");
@@ -231,8 +231,8 @@ class Character1 extends SubCharacter {
 
     public void DAY5_Morning() {
         System.out.println("男：欸那邊有飛機撞到計程車了 趕快蹲下");
-        System.out.println("1：把女生撲倒");
-        System.out.println("2：不撲倒女生");
+        System.out.println("1：把" + this.name + "撲倒");
+        System.out.println("2：不撲倒她");
         int choice = scanner.nextInt();
         if(choice == 1) this.likePoint += 5;
         System.out.println("女：哇 好痛喔 幸好只是擦到而已沒有撞到我 我還以為你是開玩笑的欸");
@@ -283,13 +283,128 @@ class Character2 extends SubCharacter {
         this.mainCharacter = mainCharacter;
         this.type = "同桌";
         this.name = "default";
-        this.likePoint = random.nextInt(21) + 50;
-        this.gender = "男";
+        this.likePoint = random.nextInt(13) + 50;
+        this.gender = "女";
     }
 
-    public void someEvent() {
-
+    public void DAY1_atSchool() {
+        System.out.println("同桌：早安，我們這次是同桌喔，請多多指教");
+        System.out.println("我：哦，請多多指教");
+        System.out.println("(如果是同桌的話，感覺相處時間會變得多起來，應該有機會讓攻略她吧，好，那就決定是她了。)");
     }
+    
+    public void DAY2_atSchool() {
+        System.out.println("(上課真無聊啊~~ 诶，" + this.name +"在打瞌睡?)");
+        System.out.println("1：拿出便條紙，在紙條寫到:「打瞌睡小心被老師抓到，無聊的話要不要用紙條聊天」偷偷把紙條塞給在打瞌睡的同桌。");
+        System.out.println("2：用鉛筆偷偷戳對方，然後笑著看著同桌跟她說這堂課很重要，小心不要睡著。順便把剛剛去合作社買的提神薄荷糖分給她。");
+        int choice = scanner.nextInt();
+        if(choice == 1) this.likePoint += 10;
+        if(choice == 2) this.likePoint += 6;
+        System.out.println("(下課後)");
+        System.out.println("同桌：剛剛真的謝謝你，作為回報，我下午請你喝飲料吧");
+        System.out.println("1：只是叫醒你就有飲料喝也太好了吧，不然這樣，我負責跑腿，你負責出錢，讓我當負責跑腿的同桌吧");
+        System.out.println("2：叫醒你只有飲料喝嗎，如果只有這樣，下次你再睡著我就不知道我自己會做甚麼囉");
+        System.out.println("3：不用啦，不用因為這種事情請我喝飲料啦，我會不好意思");
+        choice = scanner.nextInt();
+        if(choice == 1) this.likePoint += 4;
+        if(choice == 2) this.likePoint -= 8;
+    }
+
+    public void DAY3_evening() {
+        System.out.println("同桌：你是不是數學特別好啊，今天老師上的排列組合我不太懂，可以教我嗎？");
+        System.out.println("1：當然沒問題，剛好我這次的英文文法搞不太懂，作為交換，你可以教我英文嗎？");
+        System.out.println("2：你是小笨蛋嗎，我有整理好的數學筆記，偷偷跟你講，我只給你而已喔");
+        int choice = scanner.nextInt();
+        if(choice == 1) this.likePoint += 2;
+        if(choice == 2) this.likePoint += 8;
+        System.out.println("(" + this.name + "暫時複習完今天的內容，放下筆後用手撐起頭看著我)");
+        System.out.println("同桌：你好認真喔。這就是功課好的原因嗎？");
+        System.out.println("1：用手把她的頭轉回去並說道：這位同學，晚自習請認真讀書。");
+        System.out.println("2：學她用手把頭撐起來看著她並說道：這位同學，用這種眼神打擾晚自習的同學犯規喔，我也要打擾回去。");
+        choice = scanner.nextInt();
+        if(choice == 1) this.likePoint += 2;
+        if(choice == 2) this.likePoint += 8;
+        System.out.println("(" + this.name + "要出去裝水，且問說要不要幫忙盛水)");
+        System.out.println("1：真的嗎，我剛好水壺也沒有水，那就麻煩你了");
+        System.out.println("2：把自己的水壺藏起來，並跟她說：「我今天忘記帶水壺了，我能跟我最好的同桌借水壺喝水嗎？」");
+        System.out.println("3：現在四處都暗暗的ㄟ，我跟你一起去盛水好了");
+        choice = scanner.nextInt();
+        if(choice == 2) this.likePoint -= 10;
+        if(choice == 3) this.likePoint += 8;
+        System.out.println("(晚自習結束。)");
+        System.out.println("1：已經很晚了，自己回家不安全，我可以陪你搭公車，要一起回家嗎？");
+        System.out.println("2：已經很晚了，回家注意安全喔，到家傳訊息跟我說一下，掰掰");
+        choice = scanner.nextInt();
+        if(choice == 1) this.likePoint += 8;
+        if(choice == 2) this.likePoint += 2;
+    }
+
+    public void DAY4_atSchool() {
+        System.out.println("老師：好，這禮拜是學園祭，我們班的主題是女僕咖啡廳，大家一起分組吧。");
+        System.out.println("同桌：(跨過桌子的中線，把臉湊近說) 一起準備學園祭感覺會很有趣，我們一組吧，可是你好像有其他朋友…");
+        System.out.println("1：不用在意他們，跟他們一組感覺會很沒效率，而且我也想和你一組");
+        System.out.println("2：平常跟他們太常待在一起了，偶爾換換組員也不錯，我們一組吧，請多多指教");
+        int choice = scanner.nextInt();
+        if(choice == 1) this.likePoint += 8;
+        if(choice == 2) this.likePoint += 4;
+        System.out.println("老師：好的那" + this.MainCharacter.name +"這組負責準備女僕的衣服跟設計菜單喔");
+        System.out.println("同桌：幸好聽起來不是什麼太麻煩的工作，我們今天的目標是先把菜單設計完成，學園祭前一天再去租女僕衣吧。");
+        System.out.println("1：沒問題，你是不是喜歡喝珍珠奶茶，那我們就公器私用，把珍珠奶茶也列入菜單吧。");
+        System.out.println("2：菜單的部分我可以負責幫品項取名，但我的美術不好，美編的部分可能要交給你喔。");
+        choice = scanner.nextInt();
+        if(choice == 1) this.likePoint += 6;
+        System.out.println("(今天的學園祭準備工作暫時告一段落。)");
+    }
+
+    public void DAY5_pickClothes() {
+        System.out.println("同桌：你提早到啦，我們趕快進去幫大家租明天要穿的女僕衣吧");
+        System.out.println("同桌：你提早到啦，我們趕快進去幫大家租明天要穿的女僕衣吧");
+        System.out.println("同桌：你提早到啦，我們趕快進去幫大家租明天要穿的女僕衣吧");
+        System.out.println("我：進去吧，ㄟ你也會扮成女僕嗎？");
+        System.out.println("同桌：會的喔，怎麼了嗎？");
+        System.out.println("1：感覺會很有趣，你穿起來肯定很好看吧，可是這樣就大家都看到的了…");
+        System.out.println("2：感覺會很有趣，你穿起來肯定很好看吧，我很期待喔");
+        int choice = scanner.nextInt();
+        if(choice == 1) this.likePoint += 8;
+        if(choice == 2) this.likePoint += 6;
+        System.out.println("(一段時間後...)");
+        System.out.println("同桌：大家的衣服都租好了，剩我自己還沒挑，你要不要幫我挑");
+        System.out.println("1：我看一下喔，你說過你不適合太緊身的衣服，啊！這件版型感覺很適合你，你穿起來一定很好看");
+        System.out.println("2：我不會挑衣服ㄟ，我怕挑到你不喜歡的，你自己選啦，反正你穿甚麼都好看。");
+        choice = scanner.nextInt();
+        if(choice == 1) this.likePoint += 8;
+        if(choice == 2) this.likePoint += 6;
+        System.out.println("(回到學校後)");
+        System.out.println("我：呼，這樣學園祭的是前準備終於告一段落了，後天一定要好好體驗學園祭");
+        System.out.println("同桌：好期待後天喔");
+        System.out.println("1：你是值班到１２點對吧，我之後剛好有空，要不要一起去逛學園祭");
+        System.out.println("2：你後天有空嗎？我不想錯過難得的機會，我明天想要跟你一起逛學園祭");
+        System.out.println("3：聽說明天３班會賣棉花糖，你不是喜歡吃棉花糖嗎？到時候要不要一起去？");
+        choice = scanner.nextInt();
+        if(choice == 1) this.likePoint += 2;
+        if(choice == 2) this.likePoint += 8;
+        if(choice == 3) this.likePoint += 4;
+        System.out.println("同桌：(笑著點頭說) 可以啊，把一點時間分給你，好期待阿。");
+    }
+
+    public void DAY6_health() {
+        System.out.println("(你和" + this.name + "在為了學園祭做準備)");
+        System.out.println("我：你怎麼了?");
+        System.out.println("同桌：我剛剛裁紙條的時候不小心割到手了ＱＱ");
+        System.out.println("1：用手帕幫她做簡單的包紮，並馬上舉手跟老師說要帶同桌去保健室。");
+        System.out.println("2：用嘴巴吸住她的手指幫她止血，再帶她去保健室包紮。");
+        int choice = scanner.nextInt();
+        if(choice == 1) this.likePoint += 7;
+        if(choice == 2) this.likePoint -= 20;
+        System.out.println("到保健室包紮完回到教室後，回到座位，同桌打算繼續把沒裁完的紙割完");
+        System.out.println("同桌：謝謝你剛剛帶我去保健室");
+        System.out.println("1：為甚麼裁紙條不找我幫忙。");
+        System.out.println("2：下次請小心，為了準備學園祭割到手好不值得，而且我會有點心疼。並且將所有的紙條搶過來自己裁");
+        choice = scanner.nextInt();
+        if(choice == 1) this.likePoint += 3;
+        if(choice == 2) this.likePoint += 10;
+    }
+
 }
 
 class Character3 extends SubCharacter {
