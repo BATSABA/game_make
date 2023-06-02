@@ -13,13 +13,14 @@ public class Game {
         Character1 friend = new Character1(this, me);
         Character2 Classmate = new Character2(this, me); 
         Character3 Senior = new Character3(this, me);
-        Character4 Sister = new Character4(this, me);
-        Character5 boy1 = new Character5(this, me);
+        Character4 Badguy = new Character4(this, me);
+        Character5 Sister = new Character5(this, me);
         while (this.gameStat && this.date < 7) {
             switch (this.date) {
                 case 1:
                     break;
                 case 2:
+                    Badguy.Day2_0800();
                     Senior.Day2_1300();
                     break;
                 case 3:
@@ -471,14 +472,89 @@ class Character4 extends SubCharacter {
         super(game, mainCharacter);
         this.game = game;
         this.mainCharacter = mainCharacter;
-        this.type = "同桌";
-        this.name = "default";
-        this.likePoint = random.nextInt(21) + 50;
+        this.type = "混混";
+        this.name = "湊";
+        this.likePoint = random.nextInt(11) + 50;
         this.gender = "男";
     }
 
-    public void someEvent() {
-
+    public void Day2_0800() {
+        System.out.println();
+        System.out.println("Day2--08:00");
+        System.out.println("我：完蛋要遲到了！啊啊啊啊啊！");
+        System.out.println("我：我的鬧鐘呢？怎麼沒叫？靠，我沒設到鬧鐘？！");
+        System.out.println("（三分鐘之內解決刷牙洗臉換衣服）");
+        System.out.println("我：我出門囉！衝啊啊啊啊啊！！！");
+        System.out.println("（跑到一半，別在書包上的別針掉了下來，滾落到巷子內）");
+        System.out.println("我：今天到底怎麼回事啊！水逆嗎？");
+        System.out.println("我：（跑到小巷子內）怎麼回事？有人在打架？");
+        System.out.println("?????：走著瞧！我們走，小弟們");
+        System.out.println("???:弱者才會說這種話啦！走著瞧？哈哈！你們來幾次我打幾次");
+        System.out.println("（一群被打的十分狼狽的人從我身旁跑過）");
+        System.out.println("我：我是不是也該閃了！別針嘛！之後再找就好了！嗯對！就這麼決定");
+        System.out.println("我：可是那個人沒事嗎？他只有一個人而已欸？");
+        System.out.println("我：啊啊！不想了！直接走我一定會後悔！");
+        System.out.println("（小心翼翼的走過去）");
+        System.out.println("我：那個...你沒事吧！ 欸？你不是我們班的嗎？你怎麼會在這裡打架？快遲到了欸！");
+        System.out.println("湊：怕遲到你倒是走啊！");
+        System.out.println("1：不行，我不能把你丟在這裡");
+        System.out.println("2：哦好！那我走了！");
+        int choice = scanner.nextInt();
+        if(choice == 1) {
+            likePoint += 10;
+            System.out.println("我：蛤？你以為你誰啊？我應該沒跟你好到這種程度吧？");
+            System.out.println("我：話不能這樣講啊！今天被我看到了！我就是要管，不然我會良心不安的，況且你是我同學");
+            System.out.println("湊：好笑，那你就良心不安吧！我的事你別管了，小心引火上身");
+            System.out.println("我：都什麼時候了還關心我");
+            System.out.println("湊：誰他媽關心你！呃......");
+        }
+        else if(choice == 2) {
+            likePoint -= 10;
+            System.out.println("我：慢走不送");
+            System.out.println("湊：你真的沒事吧？");
+            System.out.println("我：你吵死了！");
+            System.out.println("湊：噢！我閉嘴");
+        }
+        System.out.println("（只見他沿著牆壁緩緩的跌坐）");
+        System.out.println("我：你果然受傷了吧！我扶你，你起得來嗎？");
+        System.out.println("湊：別碰我！不想被我打的話就走開");
+        System.out.println("我：哎呀！這種時候就別倔了啦！不然我陪你坐在這，等你好一點我們再走");
+        System.out.println("湊：不是怕遲到？遲到就不要怪在我身上！");
+        System.out.println("我：不會啦！我又不是那種人！我就不能是因為擔心你才留下來的嗎？");
+        System.out.println("湊：用不著你來擔心");
+        System.out.println("我：決定了！你這樣也沒辦法去學校對吧！那我送你回家！");
+        System.out.println("湊：蛤？我才不需要你陪，我自己能走");
+        System.out.println("（他突然站了起來）");
+        System.out.println("我：欸！不要勉強啦！讓我扶你");
+        System.out.println("湊：就叫你別他媽碰我");
+        System.out.println("我：好好好～我不碰 我不碰");
+        System.out.println("湊：那還不快走，去你的學校");
+        System.out.println("我：我偏不！我一定要送你到家才走！這是我的堅持！！");
+        System.out.println("湊：隨便吧！煩死了！");
+        System.out.println("（跟著他走到他家）");
+        System.out.println("湊的母親：啊嘞！小湊湊怎麼今天這麼早就回來？");
+        System.out.println("湊的母親：欸！你還帶朋友回來喔！媽媽我好感動～嗚嗚嗚 我家小湊湊終於有朋友了！");
+        System.out.println("湊：講過多少次了別在別人面前這樣叫我！還有他不是我朋友");
+        System.out.println("我：（小湊湊～噗）那個，阿姨您好！我只是負責送他回來的同學而已啦！");
+        System.out.println("湊的母親：啊！別在外面說了！進來喝杯茶嗎？");
+        System.out.println("我：那就麻煩您了！");
+        System.out.println("湊：我什麼時候同意你進我家了？");
+        System.out.println("湊的母親：小湊湊不可以這樣喔！人家專程你回來欸");
+        System.out.println("湊：媽的！我要回房間了！");
+        System.out.println("我：那我還是不要打擾你們好了");
+        System.out.println("湊的母親：不好意思啊！他的本性不壞的，唉…都是因為我");
+        System.out.println("湊的母親：那個...我能拜託你一件事嗎？希望你可以接受");
+        System.out.println("我：？");
+        System.out.println("湊的母親：你能跟他做朋友嗎？這孩子從小就沒什麼朋友");
+        System.out.println("湊的母親：我只希望那一天我不在了能有個人陪著他");
+        System.out.println("湊的母親：啊！好像有點太沉重了！對不起啊");
+        System.out.println("我：我答應您～");
+        System.out.println("湊的母親：欸！真的嗎？謝謝你啊！那他就拜託你了！");
+        System.out.println("我：前提是他想跟我做朋友啦！不然我會很尷尬的");
+        System.out.println("湊的母親：他應該是想的喔！這可是他第一次帶同學回家呢！呵呵");
+        System.out.println("湊的母親：那就麻煩你囉！再見");
+        System.out.println("我：嗯，阿姨再見");
+        System.out.println("（原來我是第一個啊！莫名的很開心呢～ 不對！我為什麼會有這種想法出現？我到底怎麼了？）");
     }
 }
 
@@ -487,10 +563,10 @@ class Character5 extends SubCharacter {
         super(game, mainCharacter);
         this.game = game;
         this.mainCharacter = mainCharacter;
-        this.type = "同桌";
+        this.type = "姊姊";
         this.name = "default";
-        this.likePoint = random.nextInt(21) + 50;
-        this.gender = "男";
+        this.likePoint = random.nextInt(21) + 60;
+        this.gender = "女";
     }
 
     public void Day() {
