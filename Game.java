@@ -1,5 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Game {
     Boolean gameStat;
@@ -46,6 +47,19 @@ public class Game {
         if(this.gameStat == false) System.out.println("DEFEAT!!");
         else;
     }
+
+    public static void print_with_delay(String sentences) {
+        for (char c : sentences.toCharArray()) {
+            System.out.print(c);
+            System.out.flush();
+            try {
+                TimeUnit.MILLISECONDS.sleep(50);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 
     public static void main(String[] args) {
         Game newGame = new Game();
@@ -347,7 +361,7 @@ class Character2 extends SubCharacter {
         int choice = scanner.nextInt();
         if(choice == 1) this.likePoint += 8;
         if(choice == 2) this.likePoint += 4;
-        System.out.println("老師：好的那" + this.MainCharacter.name +"這組負責準備女僕的衣服跟設計菜單喔");
+        System.out.println("老師：好的那這組負責準備女僕的衣服跟設計菜單喔");
         System.out.println("同桌：幸好聽起來不是什麼太麻煩的工作，我們今天的目標是先把菜單設計完成，學園祭前一天再去租女僕衣吧。");
         System.out.println("1：沒問題，你是不是喜歡喝珍珠奶茶，那我們就公器私用，把珍珠奶茶也列入菜單吧。");
         System.out.println("2：菜單的部分我可以負責幫品項取名，但我的美術不好，美編的部分可能要交給你喔。");
@@ -713,7 +727,7 @@ class Character5 extends SubCharacter {
         };
     }
 
-    public void Day2_gym() {
+    public void Day3_store() {
         System.out.println("你和姐姐剛好要一起去超商買午餐，但是你跟她都有健身，必須吃黑胡椒雞胸肉，但超商剛好剩最後一包雞胸肉，你會讓給他嗎？");
         System.out.println("1：讓給他");
         System.out.println("2：不讓給他");
