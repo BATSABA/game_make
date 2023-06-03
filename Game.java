@@ -679,19 +679,131 @@ class Character5 extends SubCharacter {
         this.game = game;
         this.mainCharacter = mainCharacter;
         this.type = "姊姊";
-        this.name = "default";
+        this.name = "山下漢城";
         this.likePoint = random.nextInt(21) + 60;
         this.gender = "女";
     }
 
-    public void Day() {
+    public void Day1_afterSchool() {
+        System.out.println("姊姊放學後回家吃飯之時，家裡突然發生大火，於此同時，正好你有同學約你放學去吃飯，你要選擇去關心姊姊還是跟同學吃飯？");
+        System.out.println("1：關心他");
+        System.out.println("2：跟同學吃飯");
         int choice = scanner.nextInt();
-        if(choice == 1) {
-
-        }
+        if (choice == 1) {
+            this.likePoint -= 7;
+            System.out.println("你去關心他，但可惜你的開頭對話是“嘿，what's up”。這下子完蛋，他覺得你落井下石，好感度減少。");
+        };
         if(choice == 2) {
-            
-        }
+            this.likePoint += 7;
+            System.out.println("因為你深知他姊是班上的邊緣人，因此就算發生火災，她也邊緣到火都忘了燒她，所以他不會有事的。而因為她很感動你了解他很邊緣，所以好感度增加。");
+        };
+    }
+
+    public void Day2_gym() {
+        System.out.println("你跟姊姊在健身房相遇，但是一個重100公斤的啞鈴正要壓向她，你要怎麼做？");
+        System.out.println("1：幫她扛起啞鈴");
+        System.out.println("2：不幫他拿啞鈴");
+        int choice = scanner.nextInt();
+        if (choice == 1) {
+            this.likePoint -= 7;
+            System.out.println("你幫她扛起啞鈴，但你實在是太細了，反而幫倒忙，連自身重量一起壓在她身上，好感度減少");
+        };
+        if(choice == 2) {
+            System.out.println("你不幫他拿啞鈴，她靠自己強大的力量擋下啞鈴，她對自己的好感度增加。");
+        };
+    }
+
+    public void Day2_gym() {
+        System.out.println("你和姐姐剛好要一起去超商買午餐，但是你跟她都有健身，必須吃黑胡椒雞胸肉，但超商剛好剩最後一包雞胸肉，你會讓給他嗎？");
+        System.out.println("1：讓給他");
+        System.out.println("2：不讓給他");
+        int choice = scanner.nextInt();
+        if (choice == 1) {
+            this.likePoint -= 7;
+            System.out.println("但她吃完後肌肉變多，她開始看不起你這個細狗，好感度減少。");
+        };
+        if(choice == 2) {
+            this.likePoint += 7;
+            System.out.println("你吃完後變壯很多，你姊很欣賞你的體態，買給你五杯大冰拿以示鼓勵，好感度增加。");
+        };
+    }
+
+    public void Day4_library() {
+        System.out.println("妳一個人躺在二樓漫畫區的沙發上穿著吊嘎，全身汗臭，翹著二郎腿赤著腳睡覺。你拍照到dcard公審他，事後發現居然就是你姊，你該怎麼辦？");
+        System.out.println("1：跟她道歉");
+        System.out.println("2：不跟她道歉");
+        int choice = scanner.nextInt();
+        if (choice == 1) {
+            this.likePoint -= 7;
+            System.out.println("她覺得你是一個懂的知錯能改的人，好感度增加。");
+        };
+        if(choice == 2) {
+            this.likePoint += 7;
+            System.out.println("你假裝自己不知道，她覺得你很垃圾，好感度減少。");
+        };
+    }
+
+    public void Day5_busStop() {
+        System.out.println("偶然發現她跟我在同一個公車站下車，準備去上學，但公車站距離學校有很長一段距離，這天剛好下大雨，可是她沒帶雨傘，你會怎麼做？");
+        System.out.println("1：幫她撐雨傘");
+        System.out.println("2：不幫她撐傘");
+        int choice = scanner.nextInt();
+        if (choice == 1) {
+            this.likePoint -= 7;
+            System.out.println("幫她撐雨傘，殊不知你撐的那把雨傘是之前偷她的，你拿她的雨傘幫她撐傘，被她發現很生氣，好感度減低。");
+        };
+        if(choice == 2) {
+            this.likePoint += 7;
+            System.out.println("不幫她撐傘，你偷她傘的事情沒被發現，好感度不變。");
+        };
+    }
+
+    public void Day6_stair() {
+        System.out.println("上課鐘響了，但是你姊在教室旁的樓梯口摔倒了，腿上流出大量紅色液體，你覺得那是血而幫他扶起來，還是覺得是番茄醬，他只不過想引人注意罷了？");
+        System.out.println("1：是血");
+        System.out.println("2：是番茄醬");
+        int choice = scanner.nextInt();
+        if (choice == 1) {
+            this.likePoint -= 7;
+            System.out.println("你覺得那是血而幫他扶起來，但他覺得自己還可以走路你還幫他，是看他軟弱，好感度減低。");
+        };
+        if(choice == 2) {
+            this.likePoint += 7;
+            System.out.println("你覺得是番茄醬，她覺得你很有幽默感，爬起來跟你說很好笑後又躺回去，好感度增加。");
+        };
+    }
+
+    public void Day7() {
+        System.out.println("你決定要告白了，但是發現他卻跟別的男生有說有笑，還抱在一起，你還要告白嗎？");
+        System.out.println("1：是血");
+        System.out.println("2：是番茄醬");
+        int choice = scanner.nextInt();
+        if (choice == 1) {
+            this.likePoint -= 7;
+            System.out.println("你覺得那是血而幫他扶起來，但他覺得自己還可以走路你還幫他，是看他軟弱，好感度減低。");
+        };
+        if(choice == 2) {
+            this.likePoint += 7;
+            System.out.println("你覺得是番茄醬，她覺得你很有幽默感，爬起來跟你說很好笑後又躺回去，好感度增加。");
+        };
+
+        // A1要，但先等她跟那個男生聊完，再換你跟他告白，做個有禮貌的文明人。但告白後他卻說自己配不上你，你笑著含淚接受，頓時彷彿身處高譚市，還沒戴上小丑的面具就被現實狠狠拷打，最後被前女友所殺。（好感值低時選要的結局）
+
+        // A2要，但先等她跟那個男生聊完，再換你跟他告白，做個有禮貌的文明人。聊完天後，你試探性的問了那位男生的身分，很幸運的，跟他抱在一起的人，是他哥。你隨後鼓起勇氣告白，成功。（好感值高時選要的結局）
+
+        // B1不要，你根本沒表達心意，她怎麼會知道你喜歡她，當然不可能成功。（好感值低時選不要的結局）
+
+        // B2不要，你覺得自己反正爛命一條，再找新的就好，不缺她一個。你懷著這股傲氣想瀟灑離開，但眼淚仍止不住的從眼角流下來，你恨自己的無能與軟弱，懷疑自己的自信是不是開了濾鏡，想到戶政事務所把自己身分證名字改成魯蛇。然而，就在你轉身那霎那，她叫住了你。你無所期待，轉過頭，顫抖的打了個招呼，想盡最大努力強顏歡笑，證明自己很堅強。
+        // "謝謝你，我喜歡你"她小聲的說。你懷疑自己是不是聽錯，迅速拿出手機劃開，想確認今天是不是愚人節。你的眼神快速的掃過四周，確認沒有人拿iphone14pro max 1TB誘惑她玩真心話大冒險。
+        // 總之，你是愣住了，沒接話。而她對於你的反應不是很滿意，不耐煩的說了句：“事不過三聽過嗎？” 你只點了點頭。“我、愛、你”這次，她靠的很近，距離你的耳朵咫尺之隔。她的輕聲細語，在你耳邊卻如此的震耳欲隆。
+        // 你停滯了片刻，腦袋一片空白，你現在需要做點什麼......啊！我的告白詞呢？然而，此時，曾經練習過無數次、總把好兄弟當成告白對象、練習到兄弟都自願說yes I do 的告白詞，在這個緊要關頭卻怎麼也說不出來。而就在不知所措的同時，你突然想到，過去在課堂上，每當老師說舉手回答總成績加10分！你總是最積極的舉手，期待老師點到你，然後神色自若的回答像印度首陀羅下面是戰鬥陀螺這種幼稚屁話，而現在，你知道自己緊張到沒辦法主動講話，需要有人為這份告白詞開頭。
+        // 你決定故技重施，放手一搏，就像在過去課堂上，奮力舉直右手過頭，用滿是意會的眼神與對方四目相交，希望對方能點你回答，只是這次舉手，沒有總成績加分、也沒有簽到性質，有的只是一份表達內心悸動的勇氣。
+        // 終於，她的眼神從原本的錯愕不解，逐漸笑成了彎月，好像牛頓的地心引力只存在於她的眼尾。
+        // “請說”她是這麼說的。
+
+        // 當然，你成功了，不會被前女友殺掉。
+        // （好感值高時選不要的結局）
+
     }
 }
 
