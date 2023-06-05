@@ -44,6 +44,9 @@ public class Game {
                     friend.DAY3_exam();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
+                    Badguy.Day3_1200();
+                    System.out.println("[press any Key to continue]");
+                    scanner.nextLine();
                     Sister.Day3_store();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
@@ -58,6 +61,9 @@ public class Game {
                     Classmate.DAY4_atSchool();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
+                    Badguy.Day4_1100();
+                    System.out.println("[press any Key to continue]");
+                    scanner.nextLine();
                     Senior.Day4_1200();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
@@ -70,6 +76,9 @@ public class Game {
                     break;
                 case 5:
                     Sister.Day5_busStop();
+                    System.out.println("[press any Key to continue]");
+                    scanner.nextLine();
+                    Badguy.Day5_0810();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
                     friend.DAY5_Morning();
@@ -92,12 +101,16 @@ public class Game {
                     Senior.Day6_1300();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
+                    Badguy.Day6_1500();
+                    System.out.println("[press any Key to continue]");
+                    scanner.nextLine();
                     Sister.Day6_stair();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
                     break;
                 case 7:
                     Sister.Day7();
+                    Badguy.Day7();
                     // Date 7 events
                     break;
                 default:
@@ -815,6 +828,439 @@ class Character4 extends SubCharacter {
         Printer.print_with_delay("我：嗯，阿姨再見");
         Printer.print_with_delay("（原來我是第一個啊！莫名的很開心呢～ 不對！我為什麼會有這種想法出現？我到底怎麼了？）");
     }
+    
+    public void Day3_1200() {
+        Printer.print_with_delay();
+        Printer.print_with_delay("Day2--12:00");
+        Printer.print_with_delay("（下課鐘響）");
+        Printer.print_with_delay("同學A：欸欸！今天食堂好像有限量的炒麵麵包欸");
+        Printer.print_with_delay("同學B：真假！那還不衝？等一下全沒了......欸不是，等等我啊！");
+        Printer.print_with_delay("我：跑的真快，真不愧是限量的產品......");
+        Printer.print_with_delay("我：不過我今天有帶便當了，等一下找個安靜的地方吃吧！要去哪好呢？嗯......");
+        Printer.print_with_delay("我：決定了！去頂樓吧！畢竟那里不准學生進入！不過我有鑰匙！嘿嘿");
+        Printer.print_with_delay("我：上次幫老師鎖門之後，他就忘記要回去了，不過老師應該有很多備份鑰匙所以沒差啦！");
+        Printer.print_with_delay("（前往頂樓）");
+        Printer.print_with_delay("我：嗯？門沒有鎖？怎麼會？");
+        Printer.print_with_delay("我：難道有狙擊手要狙擊校長？哇！那我是不是就可以看到那瞬間，想想就挺刺激");
+        Printer.print_with_delay("我：不對！快住腦！別亂想了！直接進去看看吧！");
+        Printer.print_with_delay("我：喔？完了！怎麼是他......現在走來得及嗎？");
+        Printer.print_with_delay("1：直接離開");
+        Printer.print_with_delay("2：進去隨便找個地方坐");
+        int choice = scanner.nextInt();
+        if (choice == 1) {
+            likePoint -= 10;
+            Printer.print_with_delay("湊：喂！那邊那個！你人走可以，便當留下");
+            Printer.print_with_delay("我：我...我不要！這樣我要吃什麼");
+            Printer.print_with_delay("湊：誰管你啊！我可沒有要給你選擇的意思");
+            Printer.print_with_delay("我：知...知道了！給你吧！不過你可以分我幾口嗎？這時候去食堂應該沒東西了");
+            Printer.print_with_delay("湊：這可不是求人的");
+            Printer.print_with_delay("我：湊：這可不是求人的態度，不過算了！我會分的");
+        }
+        if (choice == 2) {
+            likePoint += 10;
+            Printer.print_with_delay("湊：喂！你這傢伙！既然來了就去幫我跑個腿！我要吃那個炒麵麵包，你去買給我");
+            Printer.print_with_delay("我：欸欸欸～但...但是那個...現...現在應該買不到了");
+            Printer.print_with_delay("我：不然我幫你買其他的？嗯？還...還是你要跟我一起吃我帶的便當");
+            Printer.print_with_delay("湊：蛤？為什麼我要跟你這種傢伙......");
+            Printer.print_with_delay("（咕嚕嚕～）");
+            Printer.print_with_delay("湊：隨便啦！一起吃就一起吃");
+        }
+        Printer.print_with_delay("我：真的可以嗎？嗚嗚嗚～我還有能吃的份欸！你人其實也不壞嘛！");
+        Printer.print_with_delay("湊：你他媽要吃就給我閉嘴！吵死了");
+        Printer.print_with_delay("我：嘿嘿！知道了！對了對了！這個我很推薦喔！這個小章魚可是我的自信之作");
+        Printer.print_with_delay("湊：這不就只是把小熱狗切一切而已嗎？這就自信了？");
+        Printer.print_with_delay("我：不要這樣啦！我的料理造詣就到這裡而已嘛！啊！對了！還有這個...");
+        Printer.print_with_delay("湊：閉嘴！");
+        Printer.print_with_delay("我：（做拉起嘴巴拉鍊的姿勢，手比OK）");
+        Printer.print_with_delay("---之後過著安靜但開心的吃飯時間，雖然沒吃飽");
+        Printer.print_with_delay("---當我再次想到為什麼他會開頂樓的門的時候，已經是放學時間了");
+    }
+    
+    public void Day4_1100() {
+        Printer.print_with_delay("");
+        Printer.print_with_delay("Day4--11:00");
+        Printer.print_with_delay("(辦公室內)");
+        Printer.print_with_delay("老師：那個，你來的正好，你去教室幫我把他叫過來！");
+        Printer.print_with_delay("我：誰？");
+        Printer.print_with_delay("老師：還有誰？當然是那個染金髮的辦公室常客啊！");
+        Printer.print_with_delay("我：他這次怎麼了嗎？");
+        Printer.print_with_delay("老師：哎呀，反正你把他叫過來就對了！別管這麼多！");
+        Printer.print_with_delay("我：喔！知道了");
+        Printer.print_with_delay("（走到教室）");
+        Printer.print_with_delay("我：湊，那個...老師要你過去一下，他說有事找你");
+        Printer.print_with_delay("湊：麻煩死了");
+        Printer.print_with_delay("（他離開了教室）");
+        Printer.print_with_delay("同學A：欸！你聽說了嗎？我們班花的直笛好像在昨天被人偷走了");
+        Printer.print_with_delay("同學B：好噁！誰啊？怎麼偷那種東西？是為了上面的口水嗎～");
+        Printer.print_with_delay("同學A：什麼啊～不要說了啦！真的很噁欸～");
+        Printer.print_with_delay("同學B：所以他被叫去是因為他就是那個噁男嗎？");
+        Printer.print_with_delay("同學A：有可能欸！哈哈哈哈哈！");
+        Printer.print_with_delay("我：喂！你們兩個說夠了沒，在別人後面嚼耳根子好玩嗎？");
+        Printer.print_with_delay("我：（該不會他真的是因為這件事被叫過去的吧！）");
+        Printer.print_with_delay("我：（還是趕快跟著過去吧）");
+        Printer.print_with_delay("（辦公室門口）");
+        Printer.print_with_delay("老師：你就跟我說你昨天中午吃飯的時候在哪裡有這麼困難");
+        Printer.print_with_delay("湊：為什麼我一定要說出來才行？");
+        Printer.print_with_delay("老師：咳，注意你的口氣，我是你的導師");
+        Printer.print_with_delay("老師：昨天中午班上有女生的東西被偷了");
+        Printer.print_with_delay("湊：所以呢？關我什麼事？");
+        Printer.print_with_delay("老師：我也很想相信不關你的事，但你也要給我相信你的機會啊");
+        Printer.print_with_delay("湊：切，你如果相信我就不會把我叫來這里了，就像班上其他人那樣");
+        Printer.print_with_delay("湊：你不就是第一個懷疑我的人嗎？還說相信？我呸");
+        Printer.print_with_delay("我：（昨天中午？我們不是跑去頂樓吃飯了嗎？該不會他是為了不拖我下水才不說的？畢竟頂樓學生可不能上去）");
+        Printer.print_with_delay("我：（怎麼辦？要衝出去跟老師講我們昨天在一起還是繼續在這裡聽？）");
+        Printer.print_with_delay("1:衝出去啦！拼了！被罵就被罵！");
+        Printer.print_with_delay("2:還是待著吧！他應該自己能解決好");
+
+        int choice = scanner.nextInt();
+        if (choice == 1) {
+            likePoint += 20;
+            Printer.print_with_delay("我：報告！老師！我有事情要說！");
+            Printer.print_with_delay("老師：你來這裡做什麼？我只讓你去叫他吧！");
+            Printer.print_with_delay("我：是的，但我不想讓我朋友一個人被懷疑");
+            Printer.print_with_delay("湊：（臉紅）誰是你朋友！我可沒你這種吵死人的朋友");
+            Printer.print_with_delay("我：知道知道，是我自己認為的");
+        }
+        if (choice == 2) {
+            likePoint -= 20;
+            Printer.print_with_delay("湊：媽的！你到底想怎樣！");
+            Printer.print_with_delay("湊：有真兇不去抓，在這邊隨便懷疑人，你是哪一隻眼睛覺得我會對那種女人感興趣的。");
+            Printer.print_with_delay("湊：看上她的人多的是吧！然後你偏偏來找我？哼，相信？");
+            Printer.print_with_delay("我：（我還是講出來吧！這樣下去絕對沒有進展）");
+        }
+        Printer.print_with_delay("我：老師，我知道他昨天中午在哪？因為我跟他在一起");
+        Printer.print_with_delay("老師：哦？是在哪？你不會只是為了讓他不被懷疑才跳出來隨便說說的吧！");
+        Printer.print_with_delay("我：老師，你這個樣子還認為你是真的相信他不是犯人的嗎？");
+        Printer.print_with_delay("老師：（愣住）咳！抱歉……是我狹隘了");
+        Printer.print_with_delay("我：我們在頂樓吃飯！");
+        Printer.print_with_delay("湊：喂！你！");
+        Printer.print_with_delay("我：是我邀他上去的");
+        Printer.print_with_delay("我：最近大家因為學園祭太過亢奮了，我只是想找個安靜的地方吃飯，在路上遇到他就半強迫拉他上去了");
+        Printer.print_with_delay("我：是我的問題，要懲罰請懲罰我吧");
+        Printer.print_with_delay("老師：……");
+        Printer.print_with_delay("老師：算了！這次是我不好，如果我沒懷疑他的話你們上去這件事是不會被發現的吧！");
+        Printer.print_with_delay("老師：念在你是初犯，這次就不懲罰你們，不過別再上去了");
+        Printer.print_with_delay("我：知道了！那我們可以走了嗎？");
+        Printer.print_with_delay("老師：（擺手）行吧！");
+        Printer.print_with_delay("我：（推著他離開辦公室）走囉走囉～");
+        Printer.print_with_delay("湊：你他媽別碰我！");
+        Printer.print_with_delay("我：抱歉抱歉！下次還碰！");
+        Printer.print_with_delay("湊：你！！！");
+        Printer.print_with_delay("老師：唉！年輕真好啊～");
+    }
+    
+    public void Day5_0810() {
+        Printer.print_with_delay("");
+        Printer.print_with_delay("Day5--08:10");
+        Printer.print_with_delay("(保健室內)");
+        Printer.print_with_delay("呵呵…真沒想到這麼蠢的事會發生在我身上");
+        Printer.print_with_delay("我：平地摔是怎樣啦！而且是在校門口");
+        Printer.print_with_delay("我：不過到這裡還可以，重點是！我還是臉朝下");
+        Printer.print_with_delay("我：啊啊啊啊啊啊啊！我已經可以去死了吧！這個社會已經容不下我了，各位再見了");
+        Printer.print_with_delay("???：要去死就趕快去死！不要在這裡大吼大叫，吵死了！");
+        Printer.print_with_delay("我：（完了！原來有人嗎？）真的很對不起！");
+        Printer.print_with_delay("（隔著床的窗簾被拉開）");
+        Printer.print_with_delay("湊：怎麼又是你？真是晦氣");
+        Printer.print_with_delay("我：什麼？怎麼這樣說我！");
+        Printer.print_with_delay("我：你以為我想來這裡嗎？看到了嗎！這些血！");
+        Printer.print_with_delay("湊：看到了，然後呢？這不影響你很晦氣的事實");
+        Printer.print_with_delay("我：你...！算了！我只是來找保健室老師的！他在嗎？");
+        Printer.print_with_delay("湊：不在");
+        Printer.print_with_delay("我：那好吧！我只能自己包紮了！");
+        Printer.print_with_delay("湊：那你小聲點，你真的很吵");
+        Printer.print_with_delay("我：知道知道，你就繼續睡你的吧～");
+        Printer.print_with_delay("（他把窗簾闔上）");
+        Printer.print_with_delay("1:自己嘗試包紮");
+        Printer.print_with_delay("2:拜託他幫你包紮");
+        int choice = scanner.nextInt();
+        if (choice == 1) {
+            likePoint += 20;
+            Printer.print_with_delay("我：（窸窸窣窣 窸窸窣窣）");
+            Printer.print_with_delay("湊：（再次拉開窗簾）唉～吵死了，叫你小聲聽不懂嗎？");
+            Printer.print_with_delay("我：我...我有什麼辦法嘛！我就包不到我的手肘啊");
+            Printer.print_with_delay("湊：算了，我來幫你");
+            Printer.print_with_delay("我：可以嗎？");
+        }
+
+        if (choice == 2) {
+            likePoint -= 20;
+            Printer.print_with_delay("我：那個...");
+            Printer.print_with_delay("湊：幹嘛");
+            Printer.print_with_delay("我：你能幫我包紮一下嗎？我沒辦法包到我的手肘");
+            Printer.print_with_delay("我：啊！當然，不行的話就算了");
+            Printer.print_with_delay("湊：喔，那不行");
+            Printer.print_with_delay("我：（欸？這麼快就拒絕我，也是，他沒必要幫我包，可是我自己也包不到）");
+            Printer.print_with_delay("我：那個...算我求你了，就幫我這一次吧！我馬上就消失");
+        }
+        Printer.print_with_delay("湊：你這人怎麼這麼麻煩");
+        Printer.print_with_delay("---他熟練的把繃帶拿起，細細的纏繞在你受傷的地方，他的動作十分的溫和，完全沒有讓你感到一絲疼痛");
+        Printer.print_with_delay("湊：（輕輕的拍在你受傷的地方）好了，麻煩精");
+        Printer.print_with_delay("我：噢！好痛！為什麼要多這一下啦！");
+        Printer.print_with_delay("湊：還嫌？再嫌我把它拆了");
+        Printer.print_with_delay("我：啊不不不，感謝大人您幫小的我包紮了！");
+        Printer.print_with_delay("我：欸？好可愛！有一個蝴蝶結欸！！！好喜歡！謝謝你！");
+        Printer.print_with_delay("我：謝謝你這麼細心的幫我包紮，你對我真好");
+        Printer.print_with_delay("湊：別自以為是了！我可不是怕你痛才包這麼輕的");
+        Printer.print_with_delay("我：是是是，不是怕我會痛，是因為你本來就很溫柔嘛！");
+        Printer.print_with_delay("湊：（臉紅）你他媽說誰溫柔");
+        Printer.print_with_delay("我：好好好，我不說了！ 其實啊！我本來都已經做好會痛死的準備了，嘿嘿～");
+        Printer.print_with_delay("湊：還是你比較想要那種？我可以幫你重包");
+        Printer.print_with_delay("我：不用了！我覺得這樣挺好");
+        Printer.print_with_delay("我：最後真的很感謝你啊！我先走了喔！小湊湊～");
+        Printer.print_with_delay("湊：（整張臉漲紅）喂！誰叫你用那個名字叫我的？ 喂！");
+    }
+    
+    public void Day6_1500() {
+        Printer.print_with_delay("");
+        Printer.print_with_delay("Day6--15:00");
+        Printer.print_with_delay("我：大家都留下來準備明天要用的東西，不過我沒有必須負責的任務，所以不用留下來");
+        Printer.print_with_delay("我：嘿嘿！真爽");
+        Printer.print_with_delay("我：不過期限就快要到了，我可能真的完蛋了，呵呵");
+        Printer.print_with_delay("我：遺書要寫些什麼好呢？嗯...要不順便寫封情書？");
+        Printer.print_with_delay("我：啊啊啊啊啊，但我到底是要告訴他我的心意還是單戀到死啊？");
+        Printer.print_with_delay("我：可是如果他討厭我怎麼辦（內心已經開始100種胡思亂想）");
+        Printer.print_with_delay("我：啊啊啊啊啊啊啊啊啊！！！！！");
+        Printer.print_with_delay("（聽見爭執的聲音）");
+        Printer.print_with_delay("我：嗯？這聲音...有點耳熟");
+        Printer.print_with_delay("???：我他媽叫你放開我");
+        Printer.print_with_delay("?????：你叫我放就放，那我把你抓起來幹嘛？");
+        Printer.print_with_delay("（循著聲音走過去）");
+        Printer.print_with_delay("我： ？！那不是湊嗎？");
+        Printer.print_with_delay("我：喂！你們在做什麼？快放開他");
+        Printer.print_with_delay("?????：哇！竟然有勇者來救你欸！小公主");
+        Printer.print_with_delay("湊：你他媽給我閉嘴，去你的小公主");
+        Printer.print_with_delay("（那群人的頭頭一臉壞笑的向我走了過來）");
+        Printer.print_with_delay("?????：哎呀！我都忘記自我介紹了呢～");
+        Printer.print_with_delay("?????：初次見面～不，應該不是初次見面，哎呀！上次有點狼狽呢～");
+        Printer.print_with_delay("?????：不過你可以叫我爸爸～");
+        Printer.print_with_delay("?????：我是他的朋友，名字的話？嗯...你好像不需要知道呢！");
+        Printer.print_with_delay("我：（扯著他的衣領）你別得寸進尺");
+        Printer.print_with_delay("?????：哎呀哎呀～一點玩笑都不能開呢～勇者醬");
+        Printer.print_with_delay("我：我不管你們有什麼恩怨情仇要解決，不過這裡還是我們學校，你就不怕我去找老師來嗎？");
+        Printer.print_with_delay("?????：你要去搬救兵？哈哈哈哈哈～ 你覺得我會給你這個機會嗎？");
+        Printer.print_with_delay("我：不用你給（拿起手機輸入電話號碼）");
+        Printer.print_with_delay("?????：好啦好啦～不逗你了～");
+        Printer.print_with_delay("?????：不過我來告訴你一個有趣的故事吧！勇者醬～關於湊他小時候的故事喔！很有興趣吧？");
+        Printer.print_with_delay("1:抱歉我沒興趣");
+        Printer.print_with_delay("2:喔～怎麼個有趣法？");
+        int choice = scanner.nextInt();
+        if (choice == 1) {
+            likePoint = 0;
+            game.gameStat = false;
+            Printer.print_with_delay("?????：誒？我以為你很中意他呢？原來沒有啊？");
+            Printer.print_with_delay("?????：你看他好像很失望呢？");
+            Printer.print_with_delay("我：少囉唆，還不快放開他");
+            Printer.print_with_delay("?????：好好好，喂～把他放開");
+            Printer.print_with_delay("?????：真是無趣，走囉～小弟們 我們回去");
+            Printer.print_with_delay("（走到他的身邊）");
+            Printer.print_with_delay("我：（伸手想扶他）那個......你沒事吧？");
+            Printer.print_with_delay("湊：（把我的手拍掉）沒事 ");
+            Printer.print_with_delay("湊：你別碰我");
+            Printer.print_with_delay("湊：好了 你可以走了");
+            Printer.print_with_delay("我：（我只是希望他可以盡快被放開而已，難道我選錯了嗎？）");
+            Printer.print_with_delay("我：還不行，那個...你明天有時間嗎？我想要你陪我一起逛學園祭，就當我救了你的獎勵吧？");
+            Printer.print_with_delay("湊：跟我要獎勵？我應該沒有請你來救我吧？還有逛學園祭？跟你？");
+            Printer.print_with_delay("湊：抱歉我沒興趣");
+        }
+
+        if (choice == 2) {
+            likePoint += 20;
+            Printer.print_with_delay("?????：哎呀！你果然很有興趣呢~");
+            Printer.print_with_delay("?????：那我開始囉～咳咳");
+            Printer.print_with_delay("湊：喂！你他媽給我閉嘴，不准講！喂");
+            Printer.print_with_delay("?????：不用在意他 我們繼續，從前從前，有個小朋友被整個班級霸凌呢！為什麼呢？");
+            Printer.print_with_delay("?????：因為他媽媽是妓女喔～他可是連他爸爸是誰都不知道呢？");
+            Printer.print_with_delay("?????：真是骯髒對吧？雜種就是指這種人吧～哈哈哈哈哈哈哈！");
+            Printer.print_with_delay("我：所以呢？就這樣？");
+            Printer.print_with_delay("?????：什麼就這樣？你也這麼認為吧！他是個小雜種～");
+            Printer.print_with_delay("我：真是沒眼看，就因為這種原因欺負他？");
+            Printer.print_with_delay("?????：喂喂喂～你該不會在同情他吧？不會吧？");
+            Printer.print_with_delay("我：同情？不，他應該不希望有人同情他吧？");
+            Printer.print_with_delay("我：我只是替他感到不值，怎麼會遇到你們這種人");
+            Printer.print_with_delay("?????：你他媽！ 唉～算了 真是無趣");
+            Printer.print_with_delay("?????：走吧！小弟們");
+            Printer.print_with_delay("（走到他的身邊）");
+            Printer.print_with_delay("我：（伸手想扶他）那個......你沒事吧？");
+            Printer.print_with_delay("湊：嗯......");
+            Printer.print_with_delay("我：怎麼了？不會受傷了吧？在哪？有需要去保健室嗎？我應該早一點到的啊啊啊啊啊！");
+            Printer.print_with_delay("湊：我沒事");
+            Printer.print_with_delay("我：那就好 嘻嘻～");
+            Printer.print_with_delay("我：欸欸，我救了你，你有要給我什麼獎勵嗎？");
+            Printer.print_with_delay("湊：我可沒有讓你來救");
+            Printer.print_with_delay("我：我不管，反正你要給我獎勵");
+            Printer.print_with_delay("湊：麻煩死了，要多少？");
+            Printer.print_with_delay("我：什麼？");
+            Printer.print_with_delay("湊：我問你要多少？");
+            Printer.print_with_delay("我：？？？我看起來像在勒索你嗎？");
+            Printer.print_with_delay("湊：不像嗎？不然你要什麼？");
+            Printer.print_with_delay("我：嗯…...給我你的時間吧！");
+            Printer.print_with_delay("湊：？？？");
+            Printer.print_with_delay("我：把你明天的時間借給我好不好，我想跟你一起逛學園祭～");
+            Printer.print_with_delay("湊：你不覺得我噁心？");
+            Printer.print_with_delay("我：是因為他剛剛講的故事嗎？ 我完全不覺得喔！");
+            Printer.print_with_delay("我：我聽完甚至很後悔沒有早一點遇到你呢～這樣你就有我陪了！！不錯吧～（驕傲）");
+            Printer.print_with_delay("湊：（耳根泛紅）嗯......");
+            Printer.print_with_delay("湊：我可不想這麼早遇見你？你很煩人");
+            Printer.print_with_delay("我：欸欸欸欸欸，原來你是這樣看我的嗎？（哭）");
+            Printer.print_with_delay("湊：咳咳......我沒有真的那麼想");
+            Printer.print_with_delay("我：我不管，我傷心了，哄不好的那種");
+            Printer.print_with_delay("湊：我答應你就是了！不...不要傷心了");
+            Printer.print_with_delay("我：真的嗎！！！好耶！ 那我們明天早上校門口見！！！我先走囉～");
+            Printer.print_with_delay("湊：喂！");
+            Printer.print_with_delay("我：？");
+            Printer.print_with_delay("湊：今天......（超小聲）謝謝你");
+            Printer.print_with_delay("我：你說什麼？");
+            Printer.print_with_delay("湊：沒事，明天不要給我遲到 我不喜歡等人");
+            Printer.print_with_delay("我：遵命！！！");
+            Printer.print_with_delay("（帶著愉悅的步伐期待明天的到來～）");
+        }
+    }
+    
+    public void Day7() {
+        Printer.print_with_delay("---為了遵守與他的約定，我提早了整整半個小時出門");
+        Printer.print_with_delay("我：頭髮應該沒亂吧！這身香水味會不會很奇怪，畢竟我平時沒在噴的");
+        Printer.print_with_delay("我：距離約定的時間還有十分鐘，好期待～嘿嘿");
+        Printer.print_with_delay("（十分鐘後）");
+        Printer.print_with_delay("我：啊啊啊啊啊，但我到底是要告訴他我的心意還是單戀到死啊？");
+        Printer.print_with_delay("我：不，不可能！他不是那種人。還是他出事了？怎麼辦？要去找他嗎？");
+        Printer.print_with_delay("1:決定了！去找他吧！");
+        Printer.print_with_delay("2:待在原地等待");
+        int choice = scanner.nextInt();
+        if(choice == 1) {
+            likePoint += 20;
+            Printer.print_with_delay("我：但要去哪找他呢？先去教室看看好了");
+            Printer.print_with_delay("（到教室後）");
+            Printer.print_with_delay("我：不對！他也沒在這");
+            Printer.print_with_delay("同學C：那個...你是要找小野同學吧？");
+            Printer.print_with_delay("我：（臉紅）很...很明顯嗎？");
+            Printer.print_with_delay("同學C：你最近都跟他混在一起，很難不知道吧！");
+            Printer.print_with_delay("同學C：好啦！我今天因為要先來準備東西就很早到學校，但在那時候我就已經看到他站在校門口好像在等人？然後就有一群人來找他，他現在應該跟他們在一起？看起來都很兇，果然是朋友吧？");
+            Printer.print_with_delay("我：一群人？完了！！！");
+            Printer.print_with_delay("我：謝謝你的情報，我先走了");
+            Printer.print_with_delay("我：（不出意外的話是真的出意外了！去昨天遇到他們的地方看看吧！）");
+            Printer.print_with_delay("（教學樓後面）");
+            Printer.print_with_delay("我：真的是他們！怎麼這麼陰魂不散啊！");
+            Printer.print_with_delay("我：（大聲）喂！你們昨天還沒鬧夠嗎！幹嘛一直找他麻煩？");
+            Printer.print_with_delay("?????：喔～嗨！又是你啊？要一起參與這場盛宴嗎？");
+            Printer.print_with_delay("我：湊！你沒事吧？");
+            Printer.print_with_delay("湊：滾！我自己可以解決");
+            Printer.print_with_delay("我：（謊言）不是啊！我剛剛先去跟老師講你有危險了！班導等一下就來了！可不能讓他看到你打架啊！");
+            Printer.print_with_delay("?????：你又打小報告？看來你真的不怕我們呢～");
+            Printer.print_with_delay("我：要打架來啊？小看我是不是");
+            Printer.print_with_delay("?????：哼，那我就恭敬不如從命了 兄弟們！先解決這邊只會大聲的小雜魚");
+            Printer.print_with_delay("我：來啊！！！");
+            Printer.print_with_delay("老師：你們在幹什麼？打架嗎？");
+            Printer.print_with_delay("我：（欸不是！他怎麼真的來了！我沒去告狀啊？）");
+            Printer.print_with_delay("我：哈哈哈...沒有啦！我們在玩一種很新的遊戲，叫做『小雞抓老鷹』，沒在打架啦！");
+            Printer.print_with_delay("老師：（最好是，你們這種小孩我看多了）算了！別玩了，散了吧！");
+            Printer.print_with_delay("我：知道了！各位 今天就玩到這裡怎麼樣？（瘋狂暗示）");
+            Printer.print_with_delay("?????：唉～看來我們只能再約下次了呢！湊");
+            Printer.print_with_delay("湊：我跟你這種弱雞沒什麼好約的");
+            Printer.print_with_delay("?????：你也只有現在可以得瑟了 唉～可憐了我的拳頭啊！兩天都沒有揍到人");
+            Printer.print_with_delay("湊：？你上次也沒揍到我啊？還是你忘了你上次多狼狽了？");
+            Printer.print_with_delay("?????：我們走著瞧！");
+            Printer.print_with_delay("（等那群人走後）");
+            Printer.print_with_delay("老師：你們倆也走吧！別再惹事了！");
+            Printer.print_with_delay("我：（小聲）明明不是我們在惹事的");
+            Printer.print_with_delay("老師：嗯？");
+            Printer.print_with_delay("我：沒沒沒！知道了 我們走吧！湊 ");
+            Printer.print_with_delay("我：學園祭已經開始了！我們去逛逛吧？");
+            Printer.print_with_delay("湊：你真的跑去跟老師打小報告啊？");
+            Printer.print_with_delay("我：我才沒那個時間嘞！我第一時間就衝來了！誰知道他為什麼會出現？最懵的應該是我了吧！");
+            Printer.print_with_delay("湊：（臉紅）第一時間...");
+            Printer.print_with_delay("我：（一臉壞笑）對了！嘿嘿～你是不是很期待今天啊？我聽同學說你今天很早就到門口等我了！");
+            Printer.print_with_delay("湊：我...我才沒，我只是因為起早了...對！我起早了睡不著才來的，才不是因為期待跟你一起逛街什麼的才睡不著...");
+            Printer.print_with_delay("湊：（臉部漲紅）不對！你剛剛什麼都沒聽到！快走了！！！");
+            Printer.print_with_delay("我：（天啊！真的好可愛）");
+        }
+        if(choice == 2) {
+            Printer.print_with_delay("我：他應該沒事啦！可能睡過頭了吧！我再等一下好了");
+            Printer.print_with_delay("（過了二十分鐘）");
+            Printer.print_with_delay("我：不對勁，我去找找他好了");
+            Printer.print_with_delay("（到了教學樓後方）");
+            Printer.print_with_delay("我：湊！你怎麼在這裡！欸？你受傷了嗎？怎麼臉上有血？在哪裡我幫你看看");
+            Printer.print_with_delay("湊：不用看，這血是他們的 我沒受傷");
+            Printer.print_with_delay("我：他們？這不是昨天那群人嘛？他們又來找你麻煩？也太不死心了吧！我是不是該稱讚他們很有毅力啊？");
+            Printer.print_with_delay("湊：走吧！去逛");
+            Printer.print_with_delay("我：喔～走吧");
+        }
+        Printer.print_with_delay("---我拉著他的手在學生們穿梭，一邊享受著一年一度的慶典");
+        Printer.print_with_delay("我：逛得差不多了，好累");
+        Printer.print_with_delay("我：對了！我剛剛一直很想問你手上那個包袱是什麼啊");
+        Printer.print_with_delay("湊：中餐，補償你的");
+        Printer.print_with_delay("我：你自己做的嗎！我要吃！");
+        Printer.print_with_delay("我：趁這個機會要不要再去頂樓一次");
+        Printer.print_with_delay("湊：你不怕被老師罵？");
+        Printer.print_with_delay("我：不會啦！老師今天要巡邏，應該很忙沒空管我們");
+        Printer.print_with_delay("湊：現在到底誰才是壞學生啊？");
+        Printer.print_with_delay("我：嘿嘿！我們～");
+        Printer.print_with_delay("（頂樓）");
+        Printer.print_with_delay("（十分鐘後）");
+        Printer.print_with_delay("我：果然還是這裡適合我，快打開吧！我超期待的");
+        Printer.print_with_delay("（他打開便當）");
+        Printer.print_with_delay("我：這...這也太豐盛了吧！我真的可以吃這種聖品嗎");
+        Printer.print_with_delay("湊：你不想吃我自己吃");
+        Printer.print_with_delay("我：不不不，我要吃！我絕對要吃！");
+        Printer.print_with_delay("（將他做的玉子燒放進嘴裡）");
+        Printer.print_with_delay("我：這也太好吃了吧！");
+        Printer.print_with_delay("我：（難怪他敢嘲諷我！他確實有那個資格））");
+        Printer.print_with_delay("我：真的好喜歡...");
+        Printer.print_with_delay("湊：你在說什麼？");
+        Printer.print_with_delay("我：（完蛋！一不小心說出口了）我的意思是我喜歡...你的便當！");
+        Printer.print_with_delay("湊：看得出來");
+        Printer.print_with_delay("我：（怎麼辦，好想跟他告白）");
+        if(likePoint < 100) {
+            Printer.print_with_delay("我：那個...湊！我有一些話想跟你說");
+            Printer.print_with_delay("湊：噢，你說啊");
+            Printer.print_with_delay("我：這個...那個...我喜歡你，你可以跟我在一起嗎？");
+            Printer.print_with_delay("湊：（驚訝）你對我是那種感情？");
+            Printer.print_with_delay("湊：我頂多只把你當朋友，還沒想過那方面的");
+            Printer.print_with_delay("我：是...這樣嗎");
+            Printer.print_with_delay("??：打擾你們真的非常抱歉呢？");
+            Printer.print_with_delay("我：你...為什麼你會在這裡？");
+            Printer.print_with_delay("??：欸～你是真不知道還假不知道啊？我來拿回你承諾過我的東西～你的靈魂～");
+            Printer.print_with_delay("??：你不是答應過我，如果沒有在一個禮拜內找到自己心屬的另一半，你就會變成我的玩具嗎？");
+            Printer.print_with_delay("湊：搞了半天原來是怕死嗎？我還想說最近你怎麼會靠近我這種人？原來只是因為我看起來最好騙吧？");
+            Printer.print_with_delay("我：不是！你誤會了！我是真的喜歡你啊！湊！");
+            Printer.print_with_delay("湊：別叫我的名字，我剛剛說錯了！你根本連朋友都不是");
+            Printer.print_with_delay("湊：（起身）喂！這傢伙就交給你！我先走了");
+            Printer.print_with_delay("我：湊！你別......");
+            Printer.print_with_delay("(噗滋)");
+            Printer.print_with_delay("我：欸～這是什麼？為什麼有血？這些是我的血嗎？");
+            Printer.print_with_delay("我：難道我真的是因為怕死才跟他告白的嗎？不過現在想這些也沒用了");
+            Printer.print_with_delay("我：（好...好冷）我真的要死了啊？哈哈");
+            Printer.print_with_delay("??：啊哈哈哈哈哈哈～這下你就是永遠屬於我一個人的了！");
+            Printer.print_with_delay("??：多美啊！這身紅色，這是喜服吧！連天都希望我們在一起呢～");
+            Printer.print_with_delay("??：我會慢慢的把你吃了！這樣你就可以永遠的跟我融合一體啦～是不是很開心！");
+            Printer.print_with_delay("??：現在，你是時候該閉上眼睛了！晚安");
+        }
+        else {
+            Printer.print_with_delay("我：湊！");
+            Printer.print_with_delay("湊：幹嘛突然叫這麼大聲，你終於瘋了是嗎？");
+            Printer.print_with_delay("我：那個...我剛剛說的喜歡不只是你的便當！我更喜歡你！所以你...可以跟我交往嗎？");
+            Printer.print_with_delay("湊：（驚訝）你對我是那種感情？");
+            Printer.print_with_delay("湊：（臉超紅）你...你知道你現在在說什麼東西嗎？我才不喜歡你");
+            Printer.print_with_delay("我：（失望）啊！對不起... ");
+            Printer.print_with_delay("我：（欸，眼淚怎麼流出來了？ 不行！不能哭！至少在他面前不能哭）");
+            Printer.print_with_delay("我：我知道了！真的對不起啊！那我先走了");
+            Printer.print_with_delay("湊：等一下");
+            Printer.print_with_delay("我：嗯？怎麼了嗎？");
+            Printer.print_with_delay("湊：抱歉，我剛剛一時嘴快，你...能再問一次嗎？");
+            Printer.print_with_delay("我：你是想看我被拒絕第二次嗎？我真的會哭的");
+            Printer.print_with_delay("湊：你再問一次就對了");
+            Printer.print_with_delay("我：好吧！湊，你能跟我在一起嗎？我真的很喜歡你");
+            Printer.print_with_delay("湊：（頭歪向一邊，耳根卻很明顯的紅透了）嗯......");
+            Printer.print_with_delay("我：你...答應了？！ 真的嗎？我不是在做夢吧！！！如果是夢請不要讓我醒來！");
+            Printer.print_with_delay("湊：哈哈～你太誇張了吧！");
+            Printer.print_with_delay("我：你笑了！這是你第一次對著我笑");
+            Printer.print_with_delay("我：小湊湊你笑起來真好看");
+            Printer.print_with_delay("湊：你他媽欠揍是不是！！");
+            Printer.print_with_delay("我：如果是被你揍的話可以～");
+            Printer.print_with_delay("湊：那現在就先來幾拳好了！喂！不是說我要給我揍，你跑什麼！給我回來！");
+            Printer.print_with_delay("我：哈哈哈！果然我真的很喜歡你呢湊！");
+        }
+    }
+    
 }
 
 class Character5 extends SubCharacter {
