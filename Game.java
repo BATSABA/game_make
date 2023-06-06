@@ -11,6 +11,7 @@ public class Game {
         this.gameStat = true;
         this.date = 0;
         MainCharacter me = new MainCharacter();
+        Character0 exFriend = new Character0(this, me);
         Character1 friend = new Character1(this, me);
         Character2 Classmate = new Character2(this, me); 
         Character3 Senior = new Character3(this, me);
@@ -18,6 +19,9 @@ public class Game {
         Character5 Sister = new Character5(this, me);
         while (this.gameStat && this.date < 7) {
             switch (this.date) {
+                case 0:
+                    exFriend.Day0_intro();
+                    break;
                 case 1:
                     Classmate.DAY1_atSchool();
                     System.out.println("[press any Key to continue]");
@@ -179,13 +183,52 @@ class SubCharacter {
     }
 }
 
+class Character0 extends SubCharacter {
+    public Character0(Game game, MainCharacter mainCharacter) {
+        super(game, mainCharacter);
+        this.game = game;
+        this.mainCharacter = mainCharacter;
+        this.type = "前男/女友";
+        this.name = "??";
+    }
+
+    public void Day0_intro() {
+        Printer.print_with_delay("??：你要跟我分手？為什麼？");
+        Printer.print_with_delay("我：你還敢問我為什麼？因為你這人真的太恐怖了！在我的手機偷偷安裝定位，被我發現之後你說是怕我會有危險，這也就算了！");
+        Printer.print_with_delay("我：我只不過跟其他人講話而已，你就跟大家說我把你這另一半丟在旁邊而我在誘惑別人？");
+        Printer.print_with_delay("??：你就是在誘惑他啊？不然你們怎麼會笑得這麼開心？");
+        Printer.print_with_delay("我：我們那只是朋友在聊天...算了！我不想跟你再解釋什麼了！就這樣和平分手吧！");
+        Printer.print_with_delay("??：既然你執意如此，我不會讓你就這麼離開的喔？（默默的從他的書包內拿出一把刀）");
+        Printer.print_with_delay("我：你...你想幹什麼？還有你在書包裡放刀？");
+
+        Printer.print_with_delay("??：這把刀啊～原本是用來保護你的呦～");
+        Printer.print_with_delay("??：然後我想幹嘛？當然是想一個你跟我可以永遠在一起的方法啊！");
+        Printer.print_with_delay("??：只要你死了，你的心就會永遠的屬於我了～嘻嘻");
+        Printer.print_with_delay("我：你...你玩笑開過頭了喔！不要過來！！！");
+        Printer.print_with_delay("??：啊！不然這樣好了！我們來玩個遊戲，怎麼樣？");
+        Printer.print_with_delay("（他一臉戲謔的慢慢走了過來並用拿著刀子的那隻手環扣在我脖子上）");
+        Printer.print_with_delay("我：這樣我就能活命？");
+        Printer.print_with_delay("??：沒錯！你會活命～我向來說話算話");
+        Printer.print_with_delay("??：你經常用你這張臉去誘惑人呢～不如......");
+        Printer.print_with_delay("??：在一週之內找到新的戀人這個遊戲怎麼樣？啊～我已經興奮起來了～");
+
+        Printer.print_with_delay("我：一週？這不可能！你這是在強人所難");
+        Printer.print_with_delay("??：強人所難又如何？你能錯過這唯一一個能讓你活命的機會？");
+        Printer.print_with_delay("??：很。好。玩。對吧～");
+        Printer.print_with_delay("??：對了對了！告訴你一件好消息～今天算第一天～所以你只剩六天可以攻略喔～");
+        Printer.print_with_delay("??：我會好好期待的！期待你跟我『融合』的那一天～哈哈哈哈哈哈哈");
+        Printer.print_with_delay("我：看來我只能真的照做了，以他的個性，我如果真的沒做到恐怕下場會很慘吧！");
+        Printer.print_with_delay("我：不想了！趕快去學校吧！畢竟我時間不多了，我一定要找到我的戀人，希望個性不要再這樣了 呵呵");
+    }
+}
+
 class Character1 extends SubCharacter {
     public Character1(Game game, MainCharacter mainCharacter) {
         super(game, mainCharacter);
         this.game = game;
         this.mainCharacter = mainCharacter;
         this.type = "青梅竹馬";
-        this.name = "default";
+        this.name = "由美";
         this.likePoint = random.nextInt(16) + 70;
         this.gender = "女";
     }
@@ -388,7 +431,7 @@ class Character2 extends SubCharacter {
         this.game = game;
         this.mainCharacter = mainCharacter;
         this.type = "同桌";
-        this.name = "default";
+        this.name = "日向葵";
         this.likePoint = random.nextInt(13) + 50;
         this.gender = "女";
     }
@@ -523,7 +566,7 @@ class Character3 extends SubCharacter {
         this.game = game;
         this.mainCharacter = mainCharacter;
         this.type = "學長";
-        this.name = "default";
+        this.name = "坊西透";
         this.likePoint = random.nextInt(21) + 50;
         this.gender = "男";
     }
