@@ -451,7 +451,10 @@ class Character2 extends SubCharacter {
 
     public void DAY1_atSchool() {
         Printer.print_with_delay("Day1--00:00");
-        Printer.print_with_delay(this.type + "：早安，我們這次是同桌喔，請多多指教");
+        Printer.print_with_delay("(上課鐘聲響起，進到教室中，發現黑板已經有新的座位表)");
+        Printer.print_with_delay("(依照座位表早到就坐位置後:)");
+        Printer.print_with_delay(this.type + "：早安，我的名字是" + this.name + "，我們這次是同桌喔，請多多指教");
+        Printer.print_with_delay("同桌帶著向陽光一半的笑容跟我打招呼。");
         Printer.print_with_delay("我：哦，請多多指教");
         Printer.print_with_delay("(如果是同桌的話，感覺相處時間會變得多起來，應該有機會讓攻略她吧，好，那就決定是她了。)");
     }
@@ -873,7 +876,6 @@ class Character4 extends SubCharacter {
     }
     
     public void Day3_1200() {
-        Printer.print_with_delay();
         Printer.print_with_delay("Day2--12:00");
         Printer.print_with_delay("（下課鐘響）");
         Printer.print_with_delay("同學A：欸欸！今天食堂好像有限量的炒麵麵包欸");
