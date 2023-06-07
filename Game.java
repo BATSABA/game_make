@@ -151,6 +151,10 @@ public class Game {
                     this.choice = scanner.nextInt();
                     switch(this.choice) {
                         case 1:
+                            if(Sister.likePoint == 0) {
+                                this.gameStat = false;
+                                break;
+                            }
                             Sister.Day7();
                             System.out.println("[press any Key to continue]");
                             scanner.nextLine();
@@ -174,11 +178,19 @@ public class Game {
                             scanner.nextLine();
                             break;
                         case 4:
+                            if(Classmate.likePoint == 0) {
+                                this.gameStat = false;
+                                break;
+                            }
                             Classmate.Day7();
                             System.out.println("[press any Key to continue]");
                             scanner.nextLine();
                             break;
                         case 5:
+                            if(friend.likePoint == 0) {
+                                this.gameStat = false;
+                                break;
+                            }
                             friend.Day7();
                             System.out.println("[press any Key to continue]");
                             scanner.nextLine();
