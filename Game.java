@@ -145,7 +145,8 @@ public class Game {
                     Printer.print_with_delay("我:今天就是最後一天了，到底要選擇誰呢?");
                     System.out.println("1:姊姊");
                     System.out.println("2:學長");
-                    System.out.println("3:透");
+                    System.out.println("3:湊");
+                    System.out.println("4:同桌");
                     this.choice = scanner.nextInt();
                     switch(this.choice) {
                         case 1:
@@ -168,6 +169,11 @@ public class Game {
                                 break;
                             }
                             Badguy.Day7();
+                            System.out.println("[press any Key to continue]");
+                            scanner.nextLine();
+                            break;
+                        case 4:
+                            Classmate.Day7();
                             System.out.println("[press any Key to continue]");
                             scanner.nextLine();
                             break;
@@ -222,7 +228,7 @@ class Printer {
             System.out.print(c);
             System.out.flush();
             try {
-                TimeUnit.MILLISECONDS.sleep(1);
+                TimeUnit.MILLISECONDS.sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -230,7 +236,7 @@ class Printer {
         
         System.out.println();
         try {
-            TimeUnit.MILLISECONDS.sleep(1);
+            TimeUnit.MILLISECONDS.sleep(150);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -636,6 +642,21 @@ class Character2 extends SubCharacter {
         choice = scanner.nextInt();
         if(choice == 1) this.likePoint += 3;
         if(choice == 2) this.likePoint += 10;
+    }
+
+    public void DAY7 () {
+        Printer.print_with_delay("(學園祭接近尾聲)");
+        Printer.print_with_delay("同桌：沒想到開心的時間過得很快對吧");
+        Printer.print_with_delay("我：我現在很緊張");
+        Printer.print_with_delay("同桌：沒想到開心的時間過得很快對吧");
+        Printer.print_with_delay("1：帶同桌前往天台，找到能夠眺望整個學園祭的角度，在深吸一口氣後拿出準備好的向日葵花束：你知道嗎？向日葵的花語是「溫暖」和「陽光」，我覺得這對像陽光一樣存在的你來說在適合不過了；另外，向日葵也有「我眼中只有你」的意思。日向葵我喜歡你，自從你成為我的同桌，你的每一個舉動就像陽光一樣，溫暖、耀眼，令我無法忽略。等回過神來，我的眼裡只有你了。跟你經過的每個瞬間都讓我很心動。日向葵，我喜歡你。請你跟我在一起。");
+        int choice = scanner.nextInt();
+        if (choice == 1 && this.likePoint > 80) {
+            Printer.print_with_delay("同桌：怎麼辦，已經開心到說不出話了，我也一樣啊，我也喜歡你。");
+        } else {
+            Printer.print_with_delay("同桌：謝謝你喜歡我，但我覺得我對你的感覺只是朋友跟同桌，對不起．．．");
+        }
+
     }
 
 }
