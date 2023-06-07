@@ -17,16 +17,26 @@ public class Game {
         Character3 Senior = new Character3(this, me);
         Character4 Badguy = new Character4(this, me);
         Character5 Sister = new Character5(this, me);
+        System.out.println();
+
         while (this.gameStat && this.date < 7) {
             switch (this.date) {
                 case 0:
                     exFriend.Day0_intro();
+                    System.out.println("[press any Key to continue]");
+                    scanner.nextLine();
                     break;
                 case 1:
                     Classmate.DAY1_atSchool();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
+                    Sister.DAY1_atSchool();
+                    System.out.println("[press any Key to continue]");
+                    scanner.nextLine();
                     friend.DAY1_atSchool();
+                    System.out.println("[press any Key to continue]");
+                    scanner.nextLine();
+                    Sister.Day1_afterSchool();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
                     break;
@@ -51,10 +61,10 @@ public class Game {
                     Badguy.Day3_1200();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
-                    Sister.Day3_store();
+                    Senior.Day3_1400();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
-                    Senior.Day3_1400();
+                    Sister.Day3_store();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
                     Classmate.DAY3_evening();
@@ -114,19 +124,24 @@ public class Game {
                     break;
                 case 7:
                     Sister.Day7();
+                    System.out.println("[press any Key to continue]");
+                    scanner.nextLine();
+                    Senior.Day7();
+                    System.out.println("[press any Key to continue]");
+                    scanner.nextLine();
                     Badguy.Day7();
-                    // Date 7 events
+                    System.out.println("[press any Key to continue]");
+                    scanner.nextLine();
                     break;
                 default:
                     break;
             }
-            this.date++;
 
             if(this.gameStat == false) {
                 System.out.println("DEFEAT!!");
                 break;
-            }else {
-                System.out.println("Summary of DAY " + (this.date - 1));
+            } else if (this.date >= 1) {
+                System.out.println("Summary of DAY " + this.date);
                 friend.print();
                 Classmate.print();
                 Senior.print();
@@ -135,6 +150,8 @@ public class Game {
                 System.out.println("[press any Key to continue]");
                 scanner.nextLine();
             }
+
+            this.date++;
         }
 
     }
@@ -151,7 +168,7 @@ class Printer {
             System.out.print(c);
             System.out.flush();
             try {
-                TimeUnit.MILLISECONDS.sleep(5);
+                TimeUnit.MILLISECONDS.sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -159,7 +176,7 @@ class Printer {
         
         System.out.println();
         try {
-            TimeUnit.MILLISECONDS.sleep(15);
+            TimeUnit.MILLISECONDS.sleep(150);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -242,13 +259,13 @@ class Character1 extends SubCharacter {
         this.mainCharacter = mainCharacter;
         this.type = "青梅竹馬";
         this.name = "由美";
-        this.likePoint = random.nextInt(16) + 70;
+        this.likePoint = random.nextInt(16) + 65;
         this.gender = "女";
     }
 
     public void DAY1_atSchool() {
+        Printer.print_with_delay("Day1--10:00");
         Printer.print_with_delay("（你跟" + this.name + "的家很近，只住在對面，在小時候常常在一起玩，會考考上了同一所高中又被分到了同班。）");
-        Printer.print_with_delay("Day1--00:00");
         Printer.print_with_delay("我：欸" + this.name + "我們怎麼那麼有緣 又被分到同班。");
         Printer.print_with_delay(this.type + "：對啊 真的是太剛好哈哈。");
         Printer.print_with_delay("我：以後也請多多指教囉！");
@@ -270,7 +287,7 @@ class Character1 extends SubCharacter {
     }
 
     public void DAY2_afterSchool() {
-        Printer.print_with_delay("Day2--00:00");
+        Printer.print_with_delay("Day2--16:00");
         Printer.print_with_delay(this.type + "：下課了欸，我們一起走回家吧。");
         Printer.print_with_delay("1：好啊");
         Printer.print_with_delay("2：不好");
@@ -311,7 +328,7 @@ class Character1 extends SubCharacter {
     }
 
     public void DAY3_exam() {
-        Printer.print_with_delay("Day3--00:00");
+        Printer.print_with_delay("Day3--09:00");
         Printer.print_with_delay("我：這次考怎樣，有進步嗎");
         Printer.print_with_delay(this.type + "：欸欸我覺得這次感覺可以喔");
         Printer.print_with_delay("1：你確定？考不好的人好像都會這樣說");
@@ -345,8 +362,8 @@ class Character1 extends SubCharacter {
     }
 
     public void DAY4_afterSchool() {
-        Printer.print_with_delay("Day4--00:00");
-        Printer.print_with_delay("（放學回家後，你準備回去趕報告，正好遇到" + this.name + "）");
+        Printer.print_with_delay("Day4--16:00");
+        Printer.print_with_delay("（放學了，你準備回去趕報告，正好遇到" + this.name + "）");
         Printer.print_with_delay("我：放學了，我們一起走吧");
         Printer.print_with_delay(this.type + "：好啊，等我一下我整理一下馬上");
 
@@ -390,7 +407,7 @@ class Character1 extends SubCharacter {
     }
 
     public void DAY5_Morning() {
-        Printer.print_with_delay("Day5--00:00");
+        Printer.print_with_delay("Day5--07:30");
         Printer.print_with_delay("我：欸那邊有飛機撞到計程車了 趕快蹲下");
         Printer.print_with_delay("1：把" + this.name + "撲倒");
         Printer.print_with_delay("2：不撲倒她");
@@ -416,7 +433,7 @@ class Character1 extends SubCharacter {
     }
 
     public void DAY6_breakTime() {
-        Printer.print_with_delay("Day6--00:00");
+        Printer.print_with_delay("Day6--09:00");
         Printer.print_with_delay("我：欸剛剛看你上課都在睡覺 啊你這樣一定學不會的啦");
         Printer.print_with_delay(this.type + "：這是我新創的學習法喔 睡眠學習法");
         Printer.print_with_delay("1：笑死這樣聽的懂我就做你男朋友");
@@ -445,12 +462,12 @@ class Character2 extends SubCharacter {
         this.mainCharacter = mainCharacter;
         this.type = "同桌";
         this.name = "日向葵";
-        this.likePoint = random.nextInt(13) + 50;
+        this.likePoint = random.nextInt(13) + 45;
         this.gender = "女";
     }
 
     public void DAY1_atSchool() {
-        Printer.print_with_delay("Day1--00:00");
+        Printer.print_with_delay("Day1--08:00");
         Printer.print_with_delay("(上課鐘聲響起，進到教室中，發現黑板已經有新的座位表)");
         Printer.print_with_delay("(依照座位表早到就坐位置後:)");
         Printer.print_with_delay(this.type + "：早安，我的名字是" + this.name + "，我們這次是同桌喔，請多多指教");
@@ -460,7 +477,7 @@ class Character2 extends SubCharacter {
     }
     
     public void DAY2_atSchool() {
-        Printer.print_with_delay("Day2--00:00");
+        Printer.print_with_delay("Day2--10:00");
         Printer.print_with_delay("(上課真無聊啊~~ 诶，" + this.name +"在打瞌睡?)");
         Printer.print_with_delay("1：拿出便條紙，在紙條寫到:「打瞌睡小心被老師抓到，無聊的話要不要用紙條聊天」偷偷把紙條塞給在打瞌睡的同桌。");
         Printer.print_with_delay("2：用鉛筆偷偷戳對方，然後笑著看著同桌跟她說這堂課很重要，小心不要睡著。順便把剛剛去合作社買的提神薄荷糖分給她。");
@@ -478,7 +495,7 @@ class Character2 extends SubCharacter {
     }
 
     public void DAY3_evening() {
-        Printer.print_with_delay("Day3--00:00");
+        Printer.print_with_delay("Day3--19:00");
         Printer.print_with_delay(this.type + "：你是不是數學特別好啊，今天老師上的排列組合我不太懂，可以教我嗎？");
         Printer.print_with_delay("1：當然沒問題，剛好我這次的英文文法搞不太懂，作為交換，你可以教我英文嗎？");
         Printer.print_with_delay("2：你是小笨蛋嗎，我有整理好的數學筆記，偷偷跟你講，我只給你而已喔");
@@ -508,7 +525,7 @@ class Character2 extends SubCharacter {
     }
 
     public void DAY4_atSchool() {
-        Printer.print_with_delay("Day4--00:00");
+        Printer.print_with_delay("Day4--09:00");
         Printer.print_with_delay("老師：好，這禮拜是學園祭，我們班的主題是女僕咖啡廳，大家一起分組吧。");
         Printer.print_with_delay(this.type + "：(跨過桌子的中線，把臉湊近說) 一起準備學園祭感覺會很有趣，我們一組吧，可是你好像有其他朋友…");
         Printer.print_with_delay("1：不用在意他們，跟他們一組感覺會很沒效率，而且我也想和你一組");
@@ -526,7 +543,7 @@ class Character2 extends SubCharacter {
     }
 
     public void DAY5_pickClothes() {
-        Printer.print_with_delay("Day5--00:00");
+        Printer.print_with_delay("Day5--16:30");
         Printer.print_with_delay(this.type + "：你提早到啦，我們趕快進去幫大家租明天要穿的女僕衣吧");
         Printer.print_with_delay("我：進去吧，ㄟ你也會扮成女僕嗎？");
         Printer.print_with_delay(this.type + "：會的喔，怎麼了嗎？");
@@ -556,7 +573,7 @@ class Character2 extends SubCharacter {
     }
 
     public void DAY6_injury() {
-        Printer.print_with_delay("Day6--00:00");
+        Printer.print_with_delay("Day6--10:00");
         Printer.print_with_delay("(你和" + this.name + "在為了學園祭做準備)");
         Printer.print_with_delay("我：你怎麼了?");
         Printer.print_with_delay(this.type + "：我剛剛裁紙條的時候不小心割到手了ＱＱ");
@@ -757,7 +774,7 @@ class Character3 extends SubCharacter {
 
     public void Day7() {
         if (this.likePoint <= 50) return;
-        Printer.print_with_delay("Day7");
+        Printer.print_with_delay("Se");
         Printer.print_with_delay("（主角與學長忙完女僕咖啡廳的事情後，決定一起逛學園祭…");
         Printer.print_with_delay("我：學長，你有想要逛什麼嗎？");
         Printer.print_with_delay(this.type + "：看你呀，我都行。");
@@ -876,7 +893,7 @@ class Character4 extends SubCharacter {
     }
     
     public void Day3_1200() {
-        Printer.print_with_delay("Day2--12:00");
+        Printer.print_with_delay("Day3--12:00");
         Printer.print_with_delay("（下課鐘響）");
         Printer.print_with_delay("同學A：欸欸！今天食堂好像有限量的炒麵麵包欸");
         Printer.print_with_delay("同學B：真假！那還不衝？等一下全沒了......欸不是，等等我啊！");
@@ -1313,15 +1330,26 @@ class Character5 extends SubCharacter {
         super(game, mainCharacter);
         this.game = game;
         this.mainCharacter = mainCharacter;
-        this.type = "姊姊";
-        this.name = "山下漢城";
+        this.type = "同學他姊";
+        this.name = "漢橙一郎";
         this.likePoint = random.nextInt(21) + 60;
         this.gender = "女";
     }
 
+    public void DAY1_atSchool() {
+        Printer.print_with_delay("Day1--09:00");
+        Printer.print_with_delay("（與很要好的同學上同一堂課）");
+        Printer.print_with_delay("我：你怎麼一直滑手機，是在看什麼？");
+        Printer.print_with_delay("好同學：喔沒有啦，最近我姐在fb開了自己的粉絲團，我在幫他的貼文留言刷流量");
+        Printer.print_with_delay("主角：啊？你姊叫什麼名字啊？");
+        Printer.print_with_delay("好同學：" + this.name);
+        Printer.print_with_delay("（拿了他姊的相片給我看）");
+        Printer.print_with_delay("我：（感謝阿爸父，終於看到一個比較好攻略的目標了）");
+    }
+
     public void Day1_afterSchool() {
-        Printer.print_with_delay("Day1--00:00");
-        Printer.print_with_delay("姊姊放學後回家吃飯之時，家裡突然發生大火，於此同時，正好你有同學約你放學去吃飯，你要選擇去關心姊姊還是跟同學吃飯？");
+        Printer.print_with_delay("Day1--17:00");
+        Printer.print_with_delay("同學他姊放學後回家吃飯之時，家裡突然發生大火，於此同時，正好你有同學約你放學去吃飯，你要選擇去關心姊姊還是跟同學吃飯？");
         Printer.print_with_delay("1：關心他");
         Printer.print_with_delay("2：跟同學吃飯");
         int choice = scanner.nextInt();
@@ -1336,8 +1364,8 @@ class Character5 extends SubCharacter {
     }
 
     public void Day2_gym() {
-        Printer.print_with_delay("Day2--00:00");
-        Printer.print_with_delay("你跟姊姊在健身房相遇，但是一個重100公斤的啞鈴正要壓向她，你要怎麼做？");
+        Printer.print_with_delay("Day2--18:00");
+        Printer.print_with_delay("你跟同學姐姐在健身房相遇，但是一個重100公斤的啞鈴正要壓向她，你要怎麼做？");
         Printer.print_with_delay("1：幫她扛起啞鈴");
         Printer.print_with_delay("2：不幫他拿啞鈴");
         int choice = scanner.nextInt();
@@ -1351,8 +1379,8 @@ class Character5 extends SubCharacter {
     }
 
     public void Day3_store() {
-        Printer.print_with_delay("Day3--00:00");
-        Printer.print_with_delay("你和姐姐剛好要一起去超商買午餐，但是你跟她都有健身，必須吃黑胡椒雞胸肉，但超商剛好剩最後一包雞胸肉，你會讓給他嗎？");
+        Printer.print_with_delay("Day3--17:00");
+        Printer.print_with_delay("你和" + this.name + "剛好要一起去超商買晚餐，但是你跟她都有健身，必須吃黑胡椒雞胸肉，但超商剛好剩最後一包雞胸肉，你會讓給他嗎？");
         Printer.print_with_delay("1：讓給他");
         Printer.print_with_delay("2：不讓給他");
         int choice = scanner.nextInt();
@@ -1362,13 +1390,13 @@ class Character5 extends SubCharacter {
         };
         if(choice == 2) {
             this.likePoint += 7;
-            Printer.print_with_delay("你吃完後變壯很多，你姊很欣賞你的體態，買給你五杯大冰拿以示鼓勵，好感度增加。");
+            Printer.print_with_delay("你吃完後變壯很多，同學姊姊很欣賞你的體態，買給你五杯大冰拿以示鼓勵，好感度增加。");
         };
     }
 
     public void Day4_library() {
-        Printer.print_with_delay("Day4--00:00");
-        Printer.print_with_delay("妳一個人躺在二樓漫畫區的沙發上穿著吊嘎，全身汗臭，翹著二郎腿赤著腳睡覺。你拍照到dcard公審他，事後發現居然就是你姊，你該怎麼辦？");
+        Printer.print_with_delay("Day4--15:00");
+        Printer.print_with_delay("妳一個人躺在二樓漫畫區的沙發上穿著吊嘎，全身汗臭，翹著二郎腿赤著腳睡覺。你拍照到dcard公審他，事後發現居然就是" + this.name + "，你該怎麼辦？");
         Printer.print_with_delay("1：跟她道歉");
         Printer.print_with_delay("2：不跟她道歉");
         int choice = scanner.nextInt();
@@ -1383,7 +1411,7 @@ class Character5 extends SubCharacter {
     }
 
     public void Day5_busStop() {
-        Printer.print_with_delay("Day5--00:00");
+        Printer.print_with_delay("Day5--07:00");
         Printer.print_with_delay("偶然發現她跟我在同一個公車站下車，準備去上學，但公車站距離學校有很長一段距離，這天剛好下大雨，可是她沒帶雨傘，你會怎麼做？");
         Printer.print_with_delay("1：幫她撐雨傘");
         Printer.print_with_delay("2：不幫她撐傘");
@@ -1399,8 +1427,8 @@ class Character5 extends SubCharacter {
     }
 
     public void Day6_stair() {
-        Printer.print_with_delay("Day6--00:00");
-        Printer.print_with_delay("上課鐘響了，但是你姊在教室旁的樓梯口摔倒了，腿上流出大量紅色液體，你覺得那是血而幫他扶起來，還是覺得是番茄醬，他只不過想引人注意罷了？");
+        Printer.print_with_delay("Day6--15:30");
+        Printer.print_with_delay("上課鐘響了，但是" + this.name + "在教室旁的樓梯口摔倒了，腿上流出大量紅色液體，你覺得那是血而幫他扶起來，還是覺得是番茄醬，他只不過想引人注意罷了？");
         Printer.print_with_delay("1：是血");
         Printer.print_with_delay("2：是番茄醬");
         int choice = scanner.nextInt();
@@ -1415,8 +1443,8 @@ class Character5 extends SubCharacter {
     }
 
     public void Day7() {
-        Printer.print_with_delay("Day7--00:00");
-        Printer.print_with_delay("你決定要告白了，但是發現他卻跟別的男生有說有笑，還抱在一起，你還要告白嗎？");
+        Printer.print_with_delay("Day7");
+        Printer.print_with_delay("你決定要向" + this.name + "告白了，但是發現他卻跟別的男生有說有笑，還抱在一起，你還要告白嗎？");
         if (this.likePoint <= 60) {
             Printer.print_with_delay("1：要，但先等她跟那個男生聊完，再換你跟他告白，做個有禮貌的文明人。");
             Printer.print_with_delay("2：不要，你根本沒表達心意，她怎麼會知道你喜歡她，當然不可能成功。");
