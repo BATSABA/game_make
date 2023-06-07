@@ -461,7 +461,7 @@ class Character1 extends SubCharacter {
     }
 
     public void DAY5_Morning() {
-        Printer.print_with_delay("Day5--07:30");
+        Printer.print_with_delay("Day5--10:50");
         Printer.print_with_delay("我：欸那邊有飛機撞到計程車了 趕快蹲下");
         Printer.print_with_delay("1：把" + this.name + "撲倒");
         Printer.print_with_delay("2：不撲倒她");
@@ -1461,7 +1461,7 @@ class Character5 extends SubCharacter {
 
     public void Day4_library() {
         Printer.print_with_delay("Day4--15:00");
-        Printer.print_with_delay("妳一個人躺在二樓漫畫區的沙發上穿著吊嘎，全身汗臭，翹著二郎腿赤著腳睡覺。你拍照到dcard公審他，事後發現居然就是" + this.name + "，你該怎麼辦？");
+        Printer.print_with_delay("你在圖書館看漫畫，卻發現有一個人躺在二樓漫畫區的沙發上穿著吊嘎，全身汗臭，翹著二郎腿赤著腳睡覺。你拍照到dcard公審她，事後發現居然就是" + this.name + "，你該怎麼辦？");
         Printer.print_with_delay("1：跟她道歉");
         Printer.print_with_delay("2：不跟她道歉");
         int choice = scanner.nextInt();
@@ -1477,7 +1477,7 @@ class Character5 extends SubCharacter {
 
     public void Day5_busStop() {
         Printer.print_with_delay("Day5--07:00");
-        Printer.print_with_delay("偶然發現她跟我在同一個公車站下車，準備去上學，但公車站距離學校有很長一段距離，這天剛好下大雨，可是她沒帶雨傘，你會怎麼做？");
+        Printer.print_with_delay("偶然發現同學她姊跟我在同一個公車站下車，準備去上學，但公車站距離學校有很長一段距離，這天剛好下大雨，可是她沒帶雨傘，你會怎麼做？");
         Printer.print_with_delay("1：幫她撐雨傘");
         Printer.print_with_delay("2：不幫她撐傘");
         int choice = scanner.nextInt();
