@@ -147,6 +147,7 @@ public class Game {
                     System.out.println("2:學長");
                     System.out.println("3:湊");
                     System.out.println("4:同桌");
+                    System.out.println("5:由美");
                     this.choice = scanner.nextInt();
                     switch(this.choice) {
                         case 1:
@@ -177,6 +178,12 @@ public class Game {
                             System.out.println("[press any Key to continue]");
                             scanner.nextLine();
                             break;
+                        case 5:
+                            friend.Day7();
+                            System.out.println("[press any Key to continue]");
+                            scanner.nextLine();
+                            break;
+                            
                         default:
                             break;
                     }
@@ -504,6 +511,24 @@ class Character1 extends SubCharacter {
         Printer.print_with_delay(this.type + "：不用 謝謝啦 其實我昨天先預習了 只是忙到很晚很累");
         Printer.print_with_delay("我：哎呦 怎麼突然認真起來了");
         Printer.print_with_delay(this.type + "：不想辜負我媽媽跟你的期待嘛");
+    }
+    
+    public void DAY7() {
+        Printer.print_with_delay("Day7--09:00");
+        Printer.print_with_delay("我：欸，我有些話想跟你說...");
+        Printer.print_with_delay(this.type + "：蛤甚麼?");
+        Printer.print_with_delay("我：其實經過這幾天的相處，我發現自己真的好喜歡你");
+        Printer.print_with_delay("我：可以跟我交往嗎?");
+        Printer.print_with_delay(this.type + "好啊，可是你能把你的全部都給我嗎?");
+        Printer.print_with_delay("我:咦...?");
+        Printer.print_with_delay("(她臉上露出了奇怪的笑容，接著突然轉變成那熟悉卻令我噁心的模樣)");
+        Printer.print_with_delay("我:怎麼是你...?");
+        Printer.print_with_delay("??:想不到吧!");
+        Printer.print_with_delay("??:總不能只有你給我驚喜嗎!!");
+        Printer.print_with_delay("(我感覺到恐懼在我全身蔓延，卻無從抵抗)");
+        Printer.print_with_delay("??:你還是走到這裡了呢!ㄏㄏ");
+        Printer.print_with_delay("我:別靠近我!!!");
+        Printer.print_with_delay("(一股冷冽的銳利灌入我的前胸之中，而我的世界也隨之遠去...)");
     }
 }
 
