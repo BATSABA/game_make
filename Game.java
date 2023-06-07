@@ -182,7 +182,7 @@ public class Game {
                                 this.gameStat = false;
                                 break;
                             }
-                            Classmate.Day7();
+                            Classmate.DAY7();
                             System.out.println("[press any Key to continue]");
                             scanner.nextLine();
                             break;
@@ -191,7 +191,7 @@ public class Game {
                                 this.gameStat = false;
                                 break;
                             }
-                            friend.Day7();
+                            friend.DAY7();
                             System.out.println("[press any Key to continue]");
                             scanner.nextLine();
                             break;
