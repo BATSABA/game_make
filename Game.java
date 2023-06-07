@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 public class Game {
     Boolean gameStat;
     int date;
+    int choice;
     Scanner scanner = new Scanner(System.in);
 
     public Game() {
@@ -17,6 +18,7 @@ public class Game {
         Character3 Senior = new Character3(this, me);
         Character4 Badguy = new Character4(this, me);
         Character5 Sister = new Character5(this, me);
+        this.choice = 0;
         System.out.println();
 
         while (this.gameStat && this.date < 7) {
@@ -27,6 +29,9 @@ public class Game {
                     scanner.nextLine();
                     break;
                 case 1:
+                    Badguy.DAY1();
+                    System.out.println("[press any Key to continue]");
+                    scanner.nextLine();
                     Classmate.DAY1_atSchool();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
@@ -37,6 +42,9 @@ public class Game {
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
                     Sister.Day1_afterSchool();
+                    System.out.println("[press any Key to continue]");
+                    scanner.nextLine();
+                    Senior.DAY1();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
                     break;
@@ -55,9 +63,11 @@ public class Game {
                     scanner.nextLine();
                     break;
                 case 3:
-                    friend.DAY3_exam();
-                    System.out.println("[press any Key to continue]");
-                    scanner.nextLine();
+                    if(friend.likePoint == 0) {
+                        friend.DAY3_exam();
+                        System.out.println("[press any Key to continue]");
+                        scanner.nextLine();
+                    }
                     Badguy.Day3_1200();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
@@ -84,9 +94,11 @@ public class Game {
                     Sister.Day4_library();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
-                    friend.DAY4_afterSchool();
-                    System.out.println("[press any Key to continue]");
-                    scanner.nextLine();
+                    if(friend.likePoint == 0) {
+                        friend.DAY4_afterSchool();
+                        System.out.println("[press any Key to continue]");
+                        scanner.nextLine();
+                    }
                     break;
                 case 5:
                     Sister.Day5_busStop();
@@ -95,9 +107,11 @@ public class Game {
                     Badguy.Day5_0810();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
-                    friend.DAY5_Morning();
-                    System.out.println("[press any Key to continue]");
-                    scanner.nextLine();
+                    if(friend.likePoint == 0) {
+                        friend.DAY5_Morning();
+                        System.out.println("[press any Key to continue]");
+                        scanner.nextLine();
+                    }
                     Senior.Day5_1230();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
@@ -106,15 +120,19 @@ public class Game {
                     scanner.nextLine();
                     break;
                 case 6:
-                    friend.DAY6_breakTime();
-                    System.out.println("[press any Key to continue]");
-                    scanner.nextLine();
+                    if(friend.likePoint == 0) {
+                        friend.DAY6_breakTime();
+                        System.out.println("[press any Key to continue]");
+                        scanner.nextLine();
+                    }
                     Classmate.DAY6_injury();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
-                    Senior.Day6_1300();
-                    System.out.println("[press any Key to continue]");
-                    scanner.nextLine();
+                    if(Senior.likePoint == 0) {
+                        Senior.Day6_1300();
+                        System.out.println("[press any Key to continue]");
+                        scanner.nextLine();
+                    }
                     Badguy.Day6_1500();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
@@ -123,24 +141,59 @@ public class Game {
                     scanner.nextLine();
                     break;
                 case 7:
-                    Sister.Day7();
-                    System.out.println("[press any Key to continue]");
-                    scanner.nextLine();
-                    Senior.Day7();
-                    System.out.println("[press any Key to continue]");
-                    scanner.nextLine();
-                    Badguy.Day7();
-                    System.out.println("[press any Key to continue]");
-                    scanner.nextLine();
+                    Printer.print_with_delay("我:今天就是最後一天了，到底要選擇誰呢?");
+                    System.out.println("1:姊姊");
+                    System.out.println("2:學長");
+                    System.out.println("3:透");
+                    this.choice = scanner.nextInt();
+                    switch(this.choice) {
+                        case 1:
+                            Sister.Day7();
+                            System.out.println("[press any Key to continue]");
+                            scanner.nextLine();
+                            break;
+                        case 2:
+                            if(Senior.likePoint == 0) {
+                                this.gameStat = false;
+                                break;
+                            }
+                            Senior.Day7();
+                            System.out.println("[press any Key to continue]");
+                            scanner.nextLine();
+                            break;
+                        case 3:
+                            if(Badguy.likePoint == 0) {
+                                this.gameStat = false;
+                                break;
+                            }
+                            Badguy.Day7();
+                            System.out.println("[press any Key to continue]");
+                            scanner.nextLine();
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 default:
                     break;
             }
-
+            
             if(this.gameStat == false) {
-                System.out.println("DEFEAT!!");
+                Printer.print_with_delay("(世界突然陷入靜默)");
+                Printer.print_with_delay("??:你看看你，仍舊是如此可悲呢。");
+                Printer.print_with_delay("我:咦，怎麼是你?");
+                Printer.print_with_delay("??:如此的傲慢，如此的目中無人，把結局葬送在自己的手上。");
+                Printer.print_with_delay("??:難道你對身邊的人對你有甚麼看法都不了解嗎?");
+                Printer.print_with_delay("??:已經傷害過了現在還要落井下石?");
+                Printer.print_with_delay("??:我就直說吧，他不喜歡你。");
+                Printer.print_with_delay("我:騙人的吧!");
+                Printer.print_with_delay("??:你現在說啥也都改變不了什麼了，和我走吧。");
+                Printer.print_with_delay("(我的四肢無法動彈，一股溫熱從脖頸處流出)");
+                Printer.print_with_delay("??:痛嗎?我們可比你痛多了。");
+                Printer.print_with_delay("(然後他說了甚麼我也聽不到了，意識隨著世界陷入一片黑暗)");
                 break;
-            } else if (this.date >= 1) {
+            }
+            if (this.date >= 1 && this.date <= 7) {
                 System.out.println("Summary of DAY " + this.date);
                 friend.print();
                 Classmate.print();
@@ -322,7 +375,7 @@ class Character1 extends SubCharacter {
             Printer.print_with_delay(this.type + "：謝謝 我自己會努力的 我今天有點累就先休息了");
         }
         if(choice == 2) {
-            game.gameStat = false;
+            likePoint = 0;
         }
 
     }
@@ -444,13 +497,6 @@ class Character1 extends SubCharacter {
         Printer.print_with_delay(this.type + "：不用 謝謝啦 其實我昨天先預習了 只是忙到很晚很累");
         Printer.print_with_delay("我：哎呦 怎麼突然認真起來了");
         Printer.print_with_delay(this.type + "：不想辜負我媽媽跟你的期待嘛");
-    }
-
-    public void surveillance() {
-        if (random.nextInt(101 - likePoint) == 0) {
-            Printer.print_with_delay("你怎麼可以這樣?");
-            game.gameStat = false;
-        }
     }
 }
 
@@ -603,6 +649,16 @@ class Character3 extends SubCharacter {
         this.likePoint = random.nextInt(21) + 50;
         this.gender = "男";
     }
+    
+    public void DAY1() {
+        Printer.print_with_delay("Day1--13:00");
+        Printer.print_with_delay("（久違的烹飪社社團課）");
+        Printer.print_with_delay("我：好久沒過來了，社團課好無聊喔。");
+        Printer.print_with_delay("（從外走進來的坊西 透）：大家好，很久沒上課了，我是最近過來幫忙的坊西透學長，可以叫我透學長，或是學長。");
+        Printer.print_with_delay("我：學長，你怎麼會想來幫忙上課？");
+        Printer.print_with_delay("學長：因為我也喜歡烹飪相關的事情，就來幫忙啦。");
+        Printer.print_with_delay("主角（這個學長一看就是暖男，跟前任的個性完全不一樣，對人應該也很好。好，決定了，就讓這個學長做我的攻略目標吧。");
+    }
 
     public void Day2_1300() {
         Printer.print_with_delay("Day2--13:00");
@@ -718,7 +774,6 @@ class Character3 extends SubCharacter {
         }
         else if (choice == 2) {
             likePoint = 0;
-            game.gameStat = false;
             Printer.print_with_delay("我：這個麻煩請你幫我轉交給烹飪社的學長。");
             Printer.print_with_delay("路人甲：直接拿給他就好嗎，沒問題。");
             Printer.print_with_delay("(突然間，我眼角餘光瞄到學長的身影漸漸靠近。我感覺到臉頰微微泛起紅暈，卻不知如何解釋。學長好像誤會了甚麼，隨即轉身離去，流露出一絲不悅之情。我急忙追上前去，想為自己的行為解釋清楚...)");
@@ -811,6 +866,16 @@ class Character4 extends SubCharacter {
         this.name = "湊";
         this.likePoint = random.nextInt(11) + 50;
         this.gender = "男";
+    }
+    
+    public void DAY1() {
+        Printer.print_with_delay("Day1--07:50");
+        Printer.print_with_delay("（在前往學校的途中）");
+        Printer.print_with_delay("我：那裡好像有人在打架？我偷偷看一眼就好，打架什麼的感覺好青春啊！");
+        Printer.print_with_delay("湊：誰在那裡？");
+        Printer.print_with_delay("湊： 喂！你！看什麼看？");
+        Printer.print_with_delay("我：抱...抱歉！我馬上走");
+        Printer.print_with_delay("（竟然被發現了？！但我剛剛沒發出聲音啊？他好強！不過這個人太危險了！把他排除在我的攻略清單外吧！）。");
     }
 
     public void Day2_0800() {
@@ -1108,7 +1173,6 @@ class Character4 extends SubCharacter {
         int choice = scanner.nextInt();
         if (choice == 1) {
             likePoint = 0;
-            game.gameStat = false;
             Printer.print_with_delay("?????：誒？我以為你很中意他呢？原來沒有啊？");
             Printer.print_with_delay("?????：你看他好像很失望呢？");
             Printer.print_with_delay("我：少囉唆，還不快放開他");
