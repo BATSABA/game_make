@@ -21,7 +21,7 @@ public class Game {
         this.choice = 0;
         System.out.println();
 
-        while (this.gameStat && this.date < 7) {
+        while (this.gameStat && this.date <= 7) {
             switch (this.date) {
                 case 0:
                     exFriend.Day0_intro();
@@ -41,9 +41,6 @@ public class Game {
                     friend.DAY1_atSchool();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
-                    Sister.Day1_afterSchool();
-                    System.out.println("[press any Key to continue]");
-                    scanner.nextLine();
                     Senior.DAY1();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
@@ -61,9 +58,13 @@ public class Game {
                     friend.DAY2_afterSchool();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
+                    Sister.Day2_gym();
+
+                    System.out.println("[press any Key to continue]");
+                    scanner.nextLine();
                     break;
                 case 3:
-                    if(friend.likePoint == 0) {
+                    if(friend.likePoint != 0) {
                         friend.DAY3_exam();
                         System.out.println("[press any Key to continue]");
                         scanner.nextLine();
@@ -94,7 +95,7 @@ public class Game {
                     Sister.Day4_library();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
-                    if(friend.likePoint == 0) {
+                    if(friend.likePoint != 0) {
                         friend.DAY4_afterSchool();
                         System.out.println("[press any Key to continue]");
                         scanner.nextLine();
@@ -107,7 +108,7 @@ public class Game {
                     Badguy.Day5_0810();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
-                    if(friend.likePoint == 0) {
+                    if(friend.likePoint != 0) {
                         friend.DAY5_Morning();
                         System.out.println("[press any Key to continue]");
                         scanner.nextLine();
@@ -120,7 +121,7 @@ public class Game {
                     scanner.nextLine();
                     break;
                 case 6:
-                    if(friend.likePoint == 0) {
+                    if(friend.likePoint != 0) {
                         friend.DAY6_breakTime();
                         System.out.println("[press any Key to continue]");
                         scanner.nextLine();
@@ -128,7 +129,7 @@ public class Game {
                     Classmate.DAY6_injury();
                     System.out.println("[press any Key to continue]");
                     scanner.nextLine();
-                    if(Senior.likePoint == 0) {
+                    if(Senior.likePoint != 0) {
                         Senior.Day6_1300();
                         System.out.println("[press any Key to continue]");
                         scanner.nextLine();
