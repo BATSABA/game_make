@@ -194,7 +194,7 @@ public class Game {
                 Printer.print_with_delay("(然後他說了甚麼我也聽不到了，意識隨著世界陷入一片黑暗)");
                 break;
             }
-            if (this.date >= 1 && this.date <= 7) {
+            if (this.date >= 1 && this.date < 7) {
                 System.out.println("Summary of DAY " + this.date);
                 friend.print();
                 Classmate.print();
@@ -222,7 +222,7 @@ class Printer {
             System.out.print(c);
             System.out.flush();
             try {
-                TimeUnit.MILLISECONDS.sleep(50);
+                TimeUnit.MILLISECONDS.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -230,7 +230,7 @@ class Printer {
         
         System.out.println();
         try {
-            TimeUnit.MILLISECONDS.sleep(150);
+            TimeUnit.MILLISECONDS.sleep(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -1412,21 +1412,21 @@ class Character5 extends SubCharacter {
         Printer.print_with_delay("我：（感謝阿爸父，終於看到一個比較好攻略的目標了）");
     }
 
-    public void Day1_afterSchool() {
-        Printer.print_with_delay("Day1--17:00");
-        Printer.print_with_delay("同學他姊放學後回家吃飯之時，家裡突然發生大火，於此同時，正好你有同學約你放學去吃飯，你要選擇去關心姊姊還是跟同學吃飯？");
-        Printer.print_with_delay("1：關心他");
-        Printer.print_with_delay("2：跟同學吃飯");
-        int choice = scanner.nextInt();
-        if (choice == 1) {
-            this.likePoint -= 7;
-            Printer.print_with_delay("你去關心他，但可惜你的開頭對話是“嘿，what's up”。這下子完蛋，他覺得你落井下石，好感度減少。");
-        };
-        if(choice == 2) {
-            this.likePoint += 7;
-            Printer.print_with_delay("因為你深知他姊是班上的邊緣人，因此就算發生火災，她也邊緣到火都忘了燒她，所以他不會有事的。而因為她很感動你了解他很邊緣，所以好感度增加。");
-        };
-    }
+    // public void Day1_afterSchool() {
+    //     Printer.print_with_delay("Day1--17:00");
+    //     Printer.print_with_delay("同學他姊放學後回家吃飯之時，家裡突然發生大火，於此同時，正好你有同學約你放學去吃飯，你要選擇去關心姊姊還是跟同學吃飯？");
+    //     Printer.print_with_delay("1：關心他");
+    //     Printer.print_with_delay("2：跟同學吃飯");
+    //     int choice = scanner.nextInt();
+    //     if (choice == 1) {
+    //         this.likePoint -= 7;
+    //         Printer.print_with_delay("你去關心他，但可惜你的開頭對話是“嘿，what's up”。這下子完蛋，他覺得你落井下石，好感度減少。");
+    //     };
+    //     if(choice == 2) {
+    //         this.likePoint += 7;
+    //         Printer.print_with_delay("因為你深知他姊是班上的邊緣人，因此就算發生火災，她也邊緣到火都忘了燒她，所以他不會有事的。而因為她很感動你了解他很邊緣，所以好感度增加。");
+    //     };
+    // }
 
     public void Day2_gym() {
         Printer.print_with_delay("Day2--18:00");
@@ -1466,11 +1466,11 @@ class Character5 extends SubCharacter {
         Printer.print_with_delay("2：不跟她道歉");
         int choice = scanner.nextInt();
         if (choice == 1) {
-            this.likePoint -= 7;
+            this.likePoint += 7;
             Printer.print_with_delay("她覺得你是一個懂的知錯能改的人，好感度增加。");
         };
         if(choice == 2) {
-            this.likePoint += 7;
+            this.likePoint -= 7;
             Printer.print_with_delay("你假裝自己不知道，她覺得你很垃圾，好感度減少。");
         };
     }
@@ -1486,7 +1486,6 @@ class Character5 extends SubCharacter {
             Printer.print_with_delay("幫她撐雨傘，殊不知你撐的那把雨傘是之前偷她的，你拿她的雨傘幫她撐傘，被她發現很生氣，好感度減低。");
         };
         if(choice == 2) {
-            this.likePoint += 7;
             Printer.print_with_delay("不幫她撐傘，你偷她傘的事情沒被發現，好感度不變。");
         };
     }
